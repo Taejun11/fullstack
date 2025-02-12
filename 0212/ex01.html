@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01</title>
+    <!-- 오늘 한 레이아웃 예제 복습 -->
+    <style>
+        *{margin: 0; padding: 0;}
+        .container{
+            /* body 전체를 감싼 내용 */
+            width: 1200px;
+            margin-left: auto; 
+            margin-right: auto;
+        }
+
+        header{height: 200px; background-color: lightgreen;}
+        .logo{/* 로고 */
+            width: 200px;
+            height: 150px;
+            background-color: gold;
+            float: left;
+            margin-top: 25px;
+            margin-left: 20px;
+        }
+        .bt{/*로고이미지*/
+            width: 200px;
+            height: 150px;
+        }
+        nav{/* 메뉴틀 */
+            width: 800px;
+            height: 80px;
+            background-color: gold;
+            float: left;
+            margin-top: 90px;
+            margin-left: 70px;
+        }
+        nav ul{/*메뉴겉면*/
+            list-style: none;
+            width: 600px;
+            height: 50px;
+            background-color: darkcyan;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 15px;
+        }
+        nav ul li{float: left;}/*메뉴버튼 가로정렬*/
+
+        nav ul li a{/*메뉴 개별 버튼*/
+            float: left;
+            text-decoration: none;
+            display: block;
+            width: 100px;
+            height: 30px;
+            background-color: coral;
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+
+        section{margin-top: 10px; height: 500px; background-color: lightgreen;}
+
+        section .left_box{/*왼편 가로박스 공통*/
+            height: 450px;
+            width: 750px;
+            background-color: gold;
+            float: left;
+            margin-top: 25px;
+            margin-left: 25px;
+        }
+        .left1{/*왼편 가로박스 중 왼쪽*/
+            height: 450px;
+            width: 350px;
+            background-color: tan;
+            float: left;
+        }
+        
+        .right1{/*왼편 가로박스 중 오른쪽*/
+            height: 450px;
+            width: 350px;
+            background-color: tan;
+            float: right;
+        }
+        .cat_left{/*왼편 가로박스 고양이 이미지*/
+            height: 420px;
+            width: 340px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        section .right_box{/*오른편 세로박스 공통*/
+            height: 450px;
+            width: 350px;
+            background-color: gold;
+            float: right;
+            margin-top: 25px;
+            margin-right: 25px;
+        }
+        .top1{/*오른편 세로박스 중 위쪽*/
+            width: 350px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+        .bot1{/*오른편 세로박스 중 아래쪽*/
+            width: 350px;
+            height: 200px;
+            background-color: blueviolet;
+            margin-top: 50px;
+        }
+        .cat_right{/*오른편 세로박스 고양이 이미지*/
+            height: 180px;
+            width: 340px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        footer{margin-top: 10px; height: 100px; background-color: lightgreen;
+            padding-top: 10px;}
+
+        .footer_t{/*푸터 중 위쪽 박스*/
+            width: 550px;
+            height: 40px;
+            background-color: gold;
+            margin-left: 150px;
+            line-height: 40px;
+        }
+        .footer_b{/*푸터 중 아래쪽 박스*/
+            width: 550px;
+            height: 40px;
+            background-color: gold;
+            margin-top: 10px;
+            margin-left: 150px;
+            line-height: 40px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo"><a href="#"><img class="bt" src="images/bt.png" alt="로고"></a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                    <li><a href="#">메뉴4</a></li>
+                    <li><a href="#">메뉴5</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <article class="left_box"><!--왼편 가로박스-->
+                <div class="left1"><img class="cat_left" src="images/cat1.jpg" alt="고양이1"></div><!--왼편 가로박스 중 왼쪽-->
+                <div class="right1"><img class="cat_left" src="images/cat2.jpg" alt="고양이2"></div><!--왼편 가로박스 중 오른쪽-->
+            </article>
+            <article class="right_box"><!--오른편 세로박스-->
+                <div class="top1"><img src="images/cat3.jpg" alt="고양이3" class="cat_right"></div><!--오른편 세로박스 중 위쪽-->
+                <div class="bot1"><img src="images/cat4.jpg" alt="고양이4" class="cat_right"></div><!--오른편 세로박스 중 아래쪽-->
+            </article>
+        </section>
+
+        <footer>
+            <div class="footer_t">
+                경기도 부천시 오정구 삼정동 032-674-5685 icoxpub@naver.com
+            </div>
+            <div class="footer_b">
+                COPYRIGHT ⓒ ALL right reserved.              
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

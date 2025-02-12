@@ -1,0 +1,15 @@
+h1{background-color: red;}
+p{color: blue;}
+.gr{color: green;}
+#pink1{background-color: pink;}
+.btxt{color: red;}
+.ctxt{color: blueviolet;}
+.atxt{font-weight: bold;}
+#b1{background-color: brown;}
+.a1{background-color: hotpink !important;}
+/* 선택자 우선순위
+    1. !important
+    2. id(#)
+    3. class(.)
+    4. 일반, type
+*/
