@@ -40,11 +40,11 @@ nav ul li a{/*메뉴별 글씨박스 상세 사항*/
 }
 
 .main{/*가운데내용*/
-    height: 600px;
+    height: 570px;
 }
 section{/*가운데내용 왼편 크기*/
     width: 600px;
-    height: 600px;
+    height: 570px;
     float: left;
     background-color: silver;
 }
@@ -75,7 +75,7 @@ section article h3{/*가운데메뉴 왼편 박스별 제목 및 옆에 이미�
 }
 aside{/*가운데메뉴 오른편 크기*/
     width: 300px;
-    height: 600px;
+    height: 570px;
     float: left;
     background-color: rgb(175, 172, 127);
     text-align: center;
@@ -86,7 +86,7 @@ aside h2{/*가운데메뉴 오른편 소제목*/
 }
 aside img{/*가운데메뉴 오른편 사진*/
     width: 230px;
-    height: 160px;
+    height: 150px;
     padding-bottom: 15px;
 }
 
