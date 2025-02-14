@@ -1,0 +1,105 @@
+*{margin: 0; padding: 0;}
+#wrapper{/*전체 페이지 크기*/
+    width: 900px;
+    margin: 0 auto;
+}
+header{/*맨윗상자*/
+    height: 200px;
+    background-color: #f46075;
+}
+header h1{/*맨윗상자 왼편글씨*/
+    color: white;
+    float: left;
+    margin-top: 70px;
+    margin-left: 50px;
+}
+.logo_p{/*맨윗상자 오른편그림*/
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+nav{/*메뉴바 크기*/
+    height: 60px;
+    background-color: #ccc;
+}
+nav ul{/*메뉴바 무늬*/
+    list-style: none;
+}
+nav ul li{/*메뉴바 글씨 거리조절*/
+    float: left;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+nav ul li a{/*메뉴별 글씨박스 상세 사항*/
+    display: block;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+}
+nav ul li a:hover{/*각 메뉴에 마우스 올렸을 때*/
+    background-color: #f46075;
+    font-weight: bold;
+    color: white;
+    border-radius: 20px;
+}
+
+.main{/*가운데내용*/
+    height: 550px;
+}
+section{/*가운데내용 왼편크기*/
+    width: 650px;
+    height: 550px;
+    background-color: skyblue;
+    float: left;
+}
+section h2{/*가운데메뉴 왼편 소제목*/
+    padding: 10px;
+    text-align: center;
+}
+section article{/*가운데메뉴 왼편 박스별 상세 사항*/
+    width: 250px;
+    height: 210px;
+    background-color: white;
+    margin-left: 35px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    float: left;
+}
+section article p{/*가운데메뉴 왼편 박스별 긴글 글씨*/
+    font-size: 13px;
+    margin-top: 7px;
+    text-align: justify;
+    /*justify 양쪽정렬*/
+
+}
+article h3{/*가운데메뉴 왼편 박스별 제목*/
+    padding-bottom: 10px;
+    padding-left: 20px;
+    background-image: url(../img/bg.png);
+    background-repeat: no-repeat;
+}
+aside{/*가운데메뉴 오른편크기*/
+    width: 250px;
+    height: 550px;
+    text-align: center; /*이미지도 정렬됨*/
+    background-color: #ffffcc;
+    float: left;
+}
+aside h2{/*가운데메뉴 오른편 소제목*/
+    padding: 10px 0px;
+}
+aside img{/*가운데메뉴 오른편 사진*/
+    padding-bottom: 10px;
+}
+
+footer{/*맨밑칸*/
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #ccc;
+    color: #fff;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout4</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .wrap{
+            width: 1200px; margin: 0 auto;
+        }
+        header{
+            width: 1200px; height: 200px;
+            background-color: chocolate;
+        }
+        header .logo{
+            float: left;
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+        header nav{
+            float: right;
+            margin-top: 150px;
+            margin-right: 20px;
+        }
+        header nav ul{
+            list-style: none;
+        }
+        header nav ul li{
+            float: left;
+            margin-right: 10px;
+        }
+        header nav ul li a{
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 10px;
+        }
+        header nav ul li a:hover{
+            background-color: white;
+            color: blue;
+            border-radius: 20px;
+        }
+
+        .main{
+            width: 1200px;
+            overflow: hidden;
+        }
+        section{
+            float: left;
+            width: 900px; height: 500px;
+            background-color: tan;
+        }
+        aside{
+            float: left;
+            width: 300px; height: 500px;
+            background-color: yellowgreen;
+        }
+        footer{
+            /* 줄바꿈처리 float: left right 처리 가능 */
+            /* clear: both; */
+            width: 1200px; height: 70px;
+            background-color: #ccc;
+            /* margin-top: 50px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1 class="logo">
+                <img src="images/logo.png" alt="로고">
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Mainmenu1</a></li>
+                    <li><a href="#">Mainmenu2</a></li>
+                    <li><a href="#">Mainmenu3</a></li>
+                    <li><a href="#">Mainmenu4</a></li>
+                    <li><a href="#">Mainmenu5</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- float주는 객체를 묶어서 높이 주는 방법 -->
+         <div class="main">
+            <section>섹션</section>
+            <aside>사이드</aside>
+         </div>
+        <footer>푸터</footer>
+    </div>
+</body>
+</html>
