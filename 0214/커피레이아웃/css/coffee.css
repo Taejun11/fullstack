@@ -1,0 +1,99 @@
+*{margin: 0; padding: 0;}
+#wrap{/*전체 페이지 크기*/
+    width: 900px;
+    margin: 0 auto;
+}
+header{/*맨윗상자 이미지*/
+    height: 270px;
+    background-image: url(../images/top.jpg);
+    background-repeat: no-repeat;
+    background-size: 900px;
+
+}
+header h1{/*맨윗상자 오른쪽 아래 글씨*/
+    float: right;
+    color: white;
+    margin-top: 180px;
+    margin-right: 50px;
+}
+
+nav{/*메뉴바 크기*/
+    height: 70px;
+    background-color: rgb(107, 45, 9);
+}
+nav ul{/*메뉴바 무늬*/
+    list-style: none;
+}
+nav ul li{/*메뉴바 글씨 거리 조절*/
+    float: left;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+nav ul li a{/*메뉴별 글씨박스 상세 사항*/
+    display: block;
+    width: 110px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.main{/*가운데내용*/
+    height: 600px;
+}
+section{/*가운데내용 왼편 크기*/
+    width: 600px;
+    height: 600px;
+    float: left;
+    background-color: silver;
+}
+section h2{/*가운데내용 왼편 소제목*/
+    text-align: center;
+    padding: 10px;
+}
+section article{/*가운데메뉴 왼편 박스별 상세 사항*/
+    width: 220px;
+    height: 220px;
+    background-color: white;
+    border: 1px solid black;
+    float: left;
+    margin-left: 35px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+section article p{/*가운데메뉴 왼편 박스별 긴글 글씨*/
+    padding: 10px;
+    line-height: 1.8;
+    font-size: 14px;
+}
+section article h3{/*가운데메뉴 왼편 박스별 제목 및 옆에 이미지*/
+    padding-left: 25px;
+    padding-bottom: 10px;
+    background-image: url(../images/kong.png);
+    background-repeat: no-repeat;
+}
+aside{/*가운데메뉴 오른편 크기*/
+    width: 300px;
+    height: 600px;
+    float: left;
+    background-color: rgb(175, 172, 127);
+    text-align: center;
+    float: left;
+}
+aside h2{/*가운데메뉴 오른편 소제목*/
+    padding: 10px 0px;
+}
+aside img{/*가운데메뉴 오른편 사진*/
+    width: 230px;
+    height: 160px;
+    padding-bottom: 15px;
+}
+
+footer{/*맨밑상자*/
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: gray;
+    color: white;
+}

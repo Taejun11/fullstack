@@ -76,9 +76,9 @@ section article p{/*가운데메뉴 왼편 박스별 긴글 글씨*/
     /*justify 양쪽정렬*/
 
 }
-article h3{/*가운데메뉴 왼편 박스별 제목*/
+article h3{/*가운데메뉴 왼편 박스별 제목 및 옆에 이미지*/
     padding-bottom: 10px;
-    padding-left: 20px;
+    padding-left: 30px;
     background-image: url(../img/bg.png);
     background-repeat: no-repeat;
 }
@@ -96,7 +96,7 @@ aside img{/*가운데메뉴 오른편 사진*/
     padding-bottom: 10px;
 }
 
-footer{/*맨밑칸*/
+footer{/*맨밑상자*/
     height: 50px;
     line-height: 50px;
     text-align: center;
