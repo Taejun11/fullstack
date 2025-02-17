@@ -1,0 +1,32 @@
+*{margin: 0; padding: 0;}
+#container{
+    width: 1200px;
+    margin: 0 auto;
+}
+#header{/* 헤더 */
+    width: 100%; height: 120px;
+    background-color: cadetblue;
+}
+#content{/* 가운데 */
+    /* width: 100%; height: 600px; */
+    overflow: hidden;
+}
+#lnb{/* 가운데 왼쪽 */
+    width: 200px; height: 600px;
+    background-color: aquamarine;
+    float: left;
+}
+#section{/* 가운데 중앙 */
+    width: 800px; height: 600px;
+    background-color: cornflowerblue;
+    float: left;
+}
+#sidebar{/* 가운데 오른쪽 */
+    width: 200px; height: 600px;
+    background-color: burlywood;
+    float: left;
+}
+#footer{/* 하단 */
+    width: 100%; height: 100px;
+    background-color: darkblue;
+}
