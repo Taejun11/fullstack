@@ -1,0 +1,109 @@
+*{margin: 0; padding: 0;}
+
+.container{/*도화지*/
+    width: 800px;
+    height: 800px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.bigcircle{/*얼굴형태*/
+    width: 800px;
+    height: 800px;
+    border: 5px solid black;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 50%;
+    position:relative;
+    background-color: #8cd5ff;
+}
+
+.eye{/*눈 크기 형태*/
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 100%;
+    position: absolute;
+}
+.left,.right{/*눈 높이*/
+    top: 310px;
+}
+.left{/*왼쪽눈 위치*/
+    left: 200px;
+}
+.right{/*오른쪽눈 위치*/
+    right: 200px;
+}
+
+.nose{/*코 크기 형태 위치*/
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 240px;
+    left: 350px;
+    z-index: 1;
+}
+.mouse1,.mouse2{/*입가 크기 형태 위치*/
+    width: 130px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    border: 5px solid #333;
+    position: absolute;
+    bottom: 130px;
+}
+.mouse1{/*왼쪽입가 위치 각도*/
+    left: 260px;
+    rotate: 50deg;
+}
+.mouse2{/*오른쪽입가 위치 각도*/
+    right: 260px;
+    rotate: -50deg;
+}
+
+.beard_left,.beard_right{/*수염박스 크기 위치*/
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    /* border: 1px solid black; */
+    bottom: 130px;
+}
+.line{/*수염 위치 색깔*/
+    position: absolute;
+    width: 160px;
+    height: 3px;
+    background-color: black;
+    top: 20px;
+    left: 20px;
+}
+.beard_left{/*왼쪽 수염박스 위치*/
+    left: 150px;
+}
+.l_line1{/*왼쪽 첫번째 줄 수염 각도*/
+    transform: rotate(20deg);
+}
+.l_line2{/*왼쪽 두번째 줄 수염 각도*/
+    top: 100px;
+}
+.l_line3{/*왼쪽 세번째 줄 수염 각도*/
+    transform: rotate(-20deg);
+    top: 150px;
+}
+
+
+.beard_right{/*오른쪽 수염박스 위치*/
+    right: 150px;
+}
+.line1{/*오른쪽 첫번째 줄 수염 각도*/
+    transform: rotate(-20deg);
+}
+.line2{/*오른쪽 두번째 줄 수염 각도 위치*/
+    top: 100px;
+}
+.line3{/*오른쪽 세번째 줄 수염 각도 위치*/
+    transform: rotate(20deg);
+    top: 150px;
+}

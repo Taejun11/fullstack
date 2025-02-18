@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positionfix</title>
+    <style>
+        body{height: 3000px;}
+        .box{
+            width: 200px; height: 200px;
+        }
+        .box1{
+            background-color: yellowgreen;
+        }
+        .box2{
+            background-color: aquamarine;
+        }
+        .box3{
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+            background-color: chartreuse;
+        }
+        /* position: fixed; 
+           1. 기준위치가 화면임 left top right bottom
+           2. 자리값 없음(겹치기 가능)
+           3. 이동하면 밑에 있던 박스가 원래 내 자리 차지함*/
+
+        .box4{
+            background-color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+</body>
+</html>

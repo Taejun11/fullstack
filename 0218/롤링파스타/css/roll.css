@@ -1,0 +1,117 @@
+*{margin: 0; padding: 0;}
+
+.content{
+    width: 100%; height: 530px;
+    background: url(../imgs/intro_bg.png);
+}
+.section1{
+    width: 1440; height: 530px;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+}
+.section1 .left{
+    width: 340px;
+    float: left;
+    padding-left: 250px;
+}
+.section1 .left img{
+    padding-top: 100px;
+}
+
+
+.section1 .right{
+    width: 1100px;
+    float: right;
+}
+.r_top img{
+    padding: 30px;
+}
+.r_top .text1{
+    color: #003d5a;
+    padding-bottom: 10px;
+}
+.r_top .text2{
+    line-height: 150%;
+}
+
+.r_bot ul{
+    width: 760px;
+    margin: 30px auto;
+    list-style: none;
+}
+.r_bot ul li{
+    float: left;
+    width: 190px; height: 250px;
+    /* border: 1px solid black; */
+    /* padding: 0 10px; */
+}
+.r_bot ul li a{
+    display: block;
+    margin: 20px auto;
+    width: 150px; height: 150px;
+    /* text-align: center; */
+}
+.r_bot ul li a img:nth-child(1){
+    display: block;
+}
+.r_bot ul li a img:nth-child(2){
+    display: none;
+}
+.r_bot ul li a:hover img:nth-child(1){
+    display: none;
+}
+.r_bot ul li a:hover img:nth-child(2){
+    display: block;
+}
+
+
+
+.section2{/* 본문 전체 크기 */
+    width: 1440px; height: 700px;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.title{
+    padding-bottom: 50px;
+}
+.title h2{
+    font-size: 43px;
+    font-weight: bold;
+}
+
+ul.list{
+    height: 430px;
+    list-style: none;
+}
+.list li{
+    width: 340px; height: 430px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    float: left;
+    padding: 50px 0px;
+    margin-right: 26.6px;
+}
+.list li:nth-child(4){
+    margin-right: 0px;
+}
+
+.section2 .bot1{
+    padding: 40px 0px;
+}
+
+.bot1 .txt5{
+    margin-top: 30px;
+}
+.bot1 .txt5 a{
+    display: block;
+    width: 320px;
+    padding: 19px 10px;
+    background-color: #003d5a;
+    color: white;
+    text-decoration: none;
+    margin: 0 auto;
+}
