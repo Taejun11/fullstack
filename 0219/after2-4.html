@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>after2-3</title>
+    <style>
+        .cf::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .bigbox{
+            width: 500px;
+            background-color: pink;
+            padding: 10px;
+        }
+        .box{
+            width: 150px;
+            height: 150px;
+            /* float하면 bigbox 깨짐 */
+            float: left;
+        }
+        .box1{
+            background-color: aquamarine;
+        }
+        .box2{
+            background-color: greenyellow;
+        }
+        .box3{
+            background-color: royalblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="bigbox cf">
+        <div class="box box1">박스1</div>
+        <div class="box box2">박스2</div>
+        <div class="box box3">박스3</div>
+    </div>
+    <p>다음에 올 요소</p>
+</body>
+</html>

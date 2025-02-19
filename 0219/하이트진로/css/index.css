@@ -1,0 +1,111 @@
+*{margin: 0; padding: 0;}
+.cf{content: ''; display: block; clear: both;}
+
+.bigbox{
+    position: relative;
+    width: 1070px;
+    height: 800px;
+    /* border: 1px solid red; */
+    margin: 50px auto 0;
+}
+.box{
+    width: 260px;
+    height: 260px;
+    position: absolute;
+}
+.box::before{/*박스공용효과*/
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 255, 0.7);
+}
+.box:hover::before{/*박스 공용 마우스 효과*/
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.box img{
+    width: 100%;
+}
+.box1{
+    left: 0;
+    top: 0;
+}
+.box2{/*가로길쭉*/
+    width: 260px;
+    height: 530px;
+    left: 270px;
+    top: 0;
+}
+.box3{
+    left: 540px;
+    top: 0;
+}
+.box4{
+    left: 810px;
+    top: 0;
+}
+.box5{
+    left: 0px;
+    top: 270px;
+}
+.box6,.box8{/*세로길쭉*/
+    width: 530px;
+    height: 260px;
+}
+.box6::before{/*세로길쭉 공용*/
+    width: 100%;
+    height: 0;
+}
+.box6:hover::before{/*세로길쭉 마우스 효과*/
+    height: 100%;
+    transition: all 0.2s;
+}
+.box8::before{/*세로길쭉 공용*/
+    width: 100%;
+    height: 0;
+}
+.box8:hover::before{/*세로길쭉 마우스 효과*/
+    height: 100%;
+    transition: all 0.2s;
+}
+.box6{
+    left: 540px;
+    top: 270px;
+}
+.box7{
+    left: 0px;
+    bottom: 0;
+}
+.box8{
+    left: 270px;
+    bottom: 0;
+}
+.box9{
+    right: 0px;
+    bottom: 0;
+}
+
+
+.box a p{/*하단 more 박스*/
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0%;
+    color: white;
+    padding-top: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    background: url(../img/more.png) no-repeat 50% 80%;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.box:hover p{/*하단 more 박스*/
+    opacity: 1;
+}
