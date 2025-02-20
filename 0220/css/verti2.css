@@ -1,0 +1,38 @@
+*{margin: 0; padding: 0;}
+.cf{content: ''; display: block; clear: both;}
+ul{list-style: none;}
+a{text-decoration: none; color: #333;}
+
+section{
+    width: 700px;
+    height: 500px;
+    border: 1px solid black;
+    margin: 100px auto 0;
+}
+
+.gnb li a{
+    display: block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ccc;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+.gnb>li>a{
+    background-color: #915959;
+    color: white;
+}
+
+.gnb>li{
+    width: 150px;
+    height: 40px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+.gnb li ul{
+
+}
+.gnb li:hover{
+ height: 200px;
+}

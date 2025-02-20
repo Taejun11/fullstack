@@ -1,0 +1,112 @@
+*{margin: 0; padding: 0;}
+.cf{content: ''; display: block; clear: both;}
+ul li{list-style: none;}
+a{color: black; text-decoration: none;}
+#wrap{}/*전체 감싸는 요소*/
+#header_out{/*전체 감싸는 요소*/
+    position: relative;
+    width: 100%;
+    height: 250px;
+    z-index: 5;
+}
+#header{/*맨 윗부분 크기*/
+    width: 1000px;
+    height: 250px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    z-index: 5;
+}
+#logo{/*맨 윗부분 로고 자리 위치*/
+    position: absolute;
+    /* border: 1px solid #333; */
+    width: 400px;
+    height: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#logo img{/*맨 윗부분 로고 세부사항*/
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#nav_icon{/*맨 윗부분 왼쪽 위 sns아이콘 위치*/
+    float: left;
+}
+#nav_icon ul li{/*맨 윗부분 왼쪽 위 sns아이콘 간격*/
+    float: left;
+    margin-left: 10px;
+}
+
+#gnb{/*맨 윗부분 오른쪽 위 사이트바 위치*/
+    float: right;
+}
+#gnb ul li{/*맨 윗부분 오른쪽 위 사이트바 간격*/
+    float: left;
+    padding: 0 10px;
+    /* padding: 0 10px; */
+    background: url(../images/bar.png) no-repeat 100% 50%;
+}
+#gnb ul li:last-child{/*맨 윗부분 오른쪽 위 사이트바 간격 조정하는 이미지*/
+    background: none;
+}
+
+.main_Nav{
+    position: absolute;
+    width: 100%;
+    top: 250px;
+    left: 0;
+}
+.main_Nav>ul{
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+.main_Nav>ul>li{
+    background-color: #333;
+    text-align: center;
+    float: left;
+}
+.main_Nav ul li a{
+    display: block;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    color: aliceblue;
+}
+.main_Nav ul li ul{
+    background-color: rgba(40, 47, 178, 0.5);
+    position: absolute;
+    height: 90px;
+    padding: 10px 0;
+    display: none;
+}
+.main_Nav ul:hover li ul{
+    display: block;
+}
+.shadow{
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    height: 0px;
+    background-color: rgba(0, 0, 255, 0.5);
+}
+.main_Nav>ul:hover+.shadow{
+    height: 110px;
+}
+
+#main{
+    /* display: block; */
+    width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid #333;
+}
+#main img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
