@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 5번줄 안쓰면 pc용으로만 나옴 -->
+    <title>responesive2</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        @media screen and (max-width: 600px) {
+            /* 최대 크기 600px 이하 (핸드폰) */
+            .box1{
+                background-color: blue;
+            }
+        }
+        @media screen and (min-width: 601px) and (max-width: 1023px){
+            /* 최소 601px 최대 1023px (스마트패드) */
+            .box1{
+                background-color: green;
+            }
+        }
+        @media screen and (min-width: 1024px){
+            /* 최소 1024px 이상 (pc) */
+            .box1{
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>total</title>
+</head>
+<body>
+    <script>
+        // 국어 영어 수학 세 과목을 입력받아 총점과 평균을 구하기
+        var ko = Number(prompt("국어 점수 입력"));
+        var en = Number(prompt("영어 점수 입력"));
+        var ma = Number(prompt("수학 점수 입력"));
+        var sum = ko + en + ma;
+        var avg = sum / 3;
+        document.write('세 과목의 총점' + ' : ' + sum + '<br>');
+        document.write('세 과목의 평균' + ' : ' + avg);
+    </script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+*{margin: 0; padding: 0;}
+
+@media screen and (max-width: 600px) {/* 최대 크기 600px 이하 (핸드폰) */
+        #wrapper{/*전체 페이지 크기*/
+        width: 100%;
+        margin: 0 auto;
+    }
+    header{/*맨윗상자*/
+        height: 160px;
+        background-color: #f46075;
+    }
+    header h1{/*맨윗상자 왼편글씨*/
+        color: white;
+        float: left;
+        margin-top: 70px;
+        margin-left: 50px;
+    }
+    .logo_p{/*맨윗상자 오른편그림*/
+        float: right;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    .logo_p img{
+        width: 120px;
+    }
+    
+    nav{/*메뉴바 크기*/
+        height: 100px;
+        background-color: #ccc;
+    }
+    nav ul{/*메뉴바 무늬*/
+        list-style: none;
+    }
+    nav ul li{/*메뉴바 글씨 거리조절*/
+        float: left;
+        width: 50%;
+        /* margin-left: 10px; */
+        margin-top: 10px;
+    }
+    nav ul li a{/*메뉴별 글씨박스 상세 사항*/
+        display: block;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        margin: 0 auto;
+    }
+    nav ul li a:hover{/*각 메뉴에 마우스 올렸을 때*/
+        background-color: #f46075;
+        font-weight: bold;
+        color: white;
+        border-radius: 20px;
+    }
+    
+    .main{/*가운데내용*/
+        /* height: 550px; */
+    }
+    section{/*가운데내용 왼편크기*/
+        width: 100%;
+        height: auto;
+        background-color: skyblue;
+        /* float: left; */
+        padding: 10px 0;
+    }
+    section h2{/*가운데메뉴 왼편 소제목*/
+        padding: 10px;
+        text-align: center;
+    }
+    section article{/*가운데메뉴 왼편 박스별 상세 사항*/
+        width: 85%;
+        height: auto;
+        margin: 0 auto;
+        background-color: white;
+        /* margin-left: 35px; */
+        /* margin-bottom: 10px; */
+        padding: 10px;
+        border: 1px solid black;
+        /* float: left; */
+    }
+    section article p{/*가운데메뉴 왼편 박스별 긴글 글씨*/
+        /* font-size: 13px; */
+        /* margin-top: 7px; */
+        text-align: justify;
+        /*justify 양쪽정렬*/
+        font-size: 12px;
+    
+    }
+    article h3{/*가운데메뉴 왼편 박스별 제목 및 옆에 이미지*/
+        padding-bottom: 10px;
+        padding-left: 30px;
+        background-image: url(../img/bg.png);
+        background-repeat: no-repeat;
+    }
+    aside{/*가운데메뉴 오른편크기*/
+        width: 100%;
+        height: auto;
+        text-align: center; /*이미지도 정렬됨*/
+        background-color: #ffffcc;
+        /* float: left; */
+        padding: 10px 0;
+    }
+    aside h2{/*가운데메뉴 오른편 소제목*/
+        padding: 10px 0px;
+    }
+    aside img{/*가운데메뉴 오른편 사진*/
+        padding-bottom: 10px;
+        width: 70%;
+        height: auto;
+    }
+    
+    footer{/*맨밑상자*/
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: #ccc;
+        color: #fff;
+        clear: both;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1023px){/* 최소 601px 최대 1023px (스마트패드) */
+    #wrapper{/*전체 페이지 크기*/
+        width: 580px;
+        margin: 0 auto;
+    }
+    header{/*맨윗상자*/
+        height: 160px;
+        background-color: #f46075;
+    }
+    header h1{/*맨윗상자 왼편글씨*/
+        color: white;
+        float: left;
+        margin-top: 70px;
+        margin-left: 50px;
+    }
+    .logo_p{/*맨윗상자 오른편그림*/
+        float: right;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    .logo_p img{
+        width: 160px;
+    }
+    
+    nav{/*메뉴바 크기*/
+        height: 50px;
+        background-color: #ccc;
+    }
+    nav ul{/*메뉴바 무늬*/
+        list-style: none;
+    }
+    nav ul li{/*메뉴바 글씨 거리조절*/
+        float: left;
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+    nav ul li a{/*메뉴별 글씨박스 상세 사항*/
+        display: block;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+    }
+    nav ul li a:hover{/*각 메뉴에 마우스 올렸을 때*/
+        background-color: #f46075;
+        font-weight: bold;
+        color: white;
+        border-radius: 20px;
+    }
+    
+    .main{/*가운데내용*/
+        /* height: 550px; */
+    }
+    section{/*가운데내용 왼편크기*/
+        width: 580px;
+        height: 500px;
+        background-color: skyblue;
+    }
+    section h2{/*가운데메뉴 왼편 소제목*/
+        padding: 10px;
+        text-align: center;
+    }
+    section article{/*가운데메뉴 왼편 박스별 상세 사항*/
+        width: 200px;
+        height: 190px;
+        background-color: white;
+        margin-left: 35px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid black;
+        float: left;
+    }
+    section article p{/*가운데메뉴 왼편 박스별 긴글 글씨*/
+        font-size: 13px;
+        margin-top: 7px;
+        text-align: justify;
+        /*justify 양쪽정렬*/
+        font-size: 12px;
+    
+    }
+    article h3{/*가운데메뉴 왼편 박스별 제목 및 옆에 이미지*/
+        padding-bottom: 10px;
+        padding-left: 30px;
+        background-image: url(../img/bg.png);
+        background-repeat: no-repeat;
+    }
+    aside{/*가운데메뉴 오른편크기*/
+        width: 580px;
+        height: 200px;
+        text-align: center; /*이미지도 정렬됨*/
+        background-color: #ffffcc;
+    }
+    aside h2{/*가운데메뉴 오른편 소제목*/
+        padding: 10px 0px;
+    }
+    aside img{/*가운데메뉴 오른편 사진*/
+        padding-bottom: 10px;
+        width: 30%;
+        height: 120px;
+    }
+    
+    footer{/*맨밑상자*/
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: #ccc;
+        color: #fff;
+        clear: both;
+    }
+}
+
+@media screen and (min-width: 1024px){/* 최소 1024px 이상 (pc) */
+    #wrapper{/*전체 페이지 크기*/
+        width: 900px;
+        margin: 0 auto;
+    }
+    header{/*맨윗상자*/
+        height: 200px;
+        background-color: #f46075;
+    }
+    header h1{/*맨윗상자 왼편글씨*/
+        color: white;
+        float: left;
+        margin-top: 70px;
+        margin-left: 50px;
+    }
+    .logo_p{/*맨윗상자 오른편그림*/
+        float: right;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    
+    nav{/*메뉴바 크기*/
+        height: 60px;
+        background-color: #ccc;
+    }
+    nav ul{/*메뉴바 무늬*/
+        list-style: none;
+    }
+    nav ul li{/*메뉴바 글씨 거리조절*/
+        float: left;
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+    nav ul li a{/*메뉴별 글씨박스 상세 사항*/
+        display: block;
+        width: 160px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+    }
+    nav ul li a:hover{/*각 메뉴에 마우스 올렸을 때*/
+        background-color: #f46075;
+        font-weight: bold;
+        color: white;
+        border-radius: 20px;
+    }
+    
+    .main{/*가운데내용*/
+        height: 550px;
+    }
+    section{/*가운데내용 왼편크기*/
+        width: 650px;
+        height: 550px;
+        background-color: skyblue;
+        float: left;
+    }
+    section h2{/*가운데메뉴 왼편 소제목*/
+        padding: 10px;
+        text-align: center;
+    }
+    section article{/*가운데메뉴 왼편 박스별 상세 사항*/
+        width: 250px;
+        height: 210px;
+        background-color: white;
+        margin-left: 35px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid black;
+        float: left;
+    }
+    section article p{/*가운데메뉴 왼편 박스별 긴글 글씨*/
+        font-size: 13px;
+        margin-top: 7px;
+        text-align: justify;
+        /*justify 양쪽정렬*/
+    
+    }
+    article h3{/*가운데메뉴 왼편 박스별 제목 및 옆에 이미지*/
+        padding-bottom: 10px;
+        padding-left: 30px;
+        background-image: url(../img/bg.png);
+        background-repeat: no-repeat;
+    }
+    aside{/*가운데메뉴 오른편크기*/
+        width: 250px;
+        height: 550px;
+        text-align: center; /*이미지도 정렬됨*/
+        background-color: #ffffcc;
+        float: left;
+    }
+    aside h2{/*가운데메뉴 오른편 소제목*/
+        padding: 10px 0px;
+    }
+    aside img{/*가운데메뉴 오른편 사진*/
+        padding-bottom: 10px;
+    }
+    
+    footer{/*맨밑상자*/
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: #ccc;
+        color: #fff;
+    }
+}
