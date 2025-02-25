@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pr4</title>
+</head>
+<body>
+    <script>
+        // 사용자 입력에 따른 간단한 계산기
+        // prompt로 입력 10, 5, '+' 입력 시 결과 15
+        // prompt로 입력 10, 5, '*' 입력 시 결과 50
+
+        var num1 = Number(prompt('첫번째 숫자를 입력하세요' , ''));
+        var num2 = Number(prompt('두번째 숫자를 입력하세요' , ''));
+        var calc = prompt('사칙연산 기호를 입력하세요(+, -, *, /)' , '');
+        var result;
+
+        switch (calc) {
+            case '+':
+                result = num1 + num2;
+                document.write(num1 + calc + num2 + '=' + result);
+                break;
+            case '-':
+                result = num1 - num2;
+                document.write(num1 + calc + num2 + '=' + result);
+                break;
+            case '*':
+                result = num1 * num2;
+                document.write(num1 + calc + num2 + '=' + result);
+                break;
+            case '/':
+                result = num1 / num2;
+                document.write(num1 + calc + num2 + '=' + result);
+                break;    
+            default:
+                result = '다시 입력하세요';
+                document.write(result);
+                break;
+        }
+        // document.write(num1 + calc + num2 + '=' + result);
+        // document.write(result);
+    </script>
+</body>
+</html>

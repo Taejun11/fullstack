@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex3-14</title>
+</head>
+<body>
+    <script>
+        // 세개의 숫자 증 가장 큰 수를 삼항 연산자로 찾기
+        // let a = 12, b= 25, c = 18;
+        // let max = a > b ? (a > c ? a : c) : (b > c ? b : c);
+        // document.write(max);
+        // 세개의 숫자 증 가장 큰 수를 if로 찾기
+        let a = 12, b= 25, c = 18;
+        if (a>b) {
+            if (a>c) {
+                document.write(a);
+            }
+        }else if(b>c){
+            document.write(b);
+        }else{
+            document.write(c);
+        }
+    </script>
+</body>
+</html>

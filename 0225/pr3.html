@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pr3</title>
+</head>
+<body>
+    <script>
+        // 사용자로부터 0~6 입력받아 해당 요일 출력
+        // 0 일요일 6 토요일
+        // switch case로
+
+        var day = Number(prompt('요일을 숫자로 입력하세요. (0~6)' , ''));
+
+        switch (day) {
+            case 0:
+                Comment = day + '는(은) 일요일';
+                break;
+            case 1:
+                Comment = day + '는(은) 월요일';
+                break;
+            case 2:
+                Comment = day + '는(은) 화요일';
+                break;
+            case 3:
+                Comment = day + '는(은) 수요일';
+                break;
+            case 4:
+                Comment = day + '는(은) 목요일';
+                break;
+            case 5:
+                Comment = day + '는(은) 금요일';
+                break;
+            case 6:
+                Comment = day + '는(은) 토요일';
+                break;
+        
+            default:
+                Comment = '새로고침 후 다시 입력하세요';
+                break;
+        }
+        document.write(Comment);
+    </script>
+</body>
+</html>

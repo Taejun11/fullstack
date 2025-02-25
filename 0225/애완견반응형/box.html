@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .box{
+            width: 200px; height: 200px;
+        }
+        .box1{
+            background-color: palegreen;
+        }
+        .box1 p{
+            margin-top: 20px;
+            /* 마진 병합현상
+            부모 자식이 모두 블록요소일 경우에 발생
+            자식에게 마진을 주면 부모에게 마진을 주는 것과 같은 현상 */
+        }
+        .box2{
+            margin-bottom: 50px;
+            /* 마진 중첩현상 */
+            background-color: papayawhip;
+        }
+        .box3{
+            margin-top: 50px;
+            background-color: cornflowerblue;
+        }
+        .box4{
+            background-color: forestgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        <p>박스1</p>
+    </div>
+    <div class="box box2">
+        <p>박스2</p>
+    </div>
+    <div class="box box3">
+        <p>박스3</p>
+    </div>
+    <div class="box box4">
+        <p>박스4</p>
+    </div>
+</body>
+</html>

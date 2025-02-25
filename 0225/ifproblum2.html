@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ifproblum2</title>
+</head>
+<body>
+    <script>
+        //prompt로 연도를 입력받아서
+        //연도가 4의 배수이면서 100의 배수가 아닐 때
+        //또는 400의 배수일 때 윤년 출력
+        //예: 2012년은 4의 배수이면서 100의 배수가 아니므로 윤년
+        //1900년은 4의 배수이지만 100의 배수이므로 윤년 아님
+        //2000년은 4의 배수이면서 100의 배수이지만 400의 배수이므로 윤년
+
+        var year = Number(prompt("연도를 입력하세요: ",''));
+         if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0 ) {
+            document.write(year + '년은 윤년')
+        }else{
+            document.write(year + '년은 윤년아님')
+        }
+        // year % 4 == 0 && year % 100 != 0 ? document.write(year + '년은 윤년') : (year % 400 == 0 ? document.write(year + '년은 윤년') : document.write(year + '년은 윤년아님');
+
+    </script>
+</body>
+</html>

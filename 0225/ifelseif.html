@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ifelseif</title>
+</head>
+<body>
+    <script>
+        //놀이동산에 입장, prompt로 나이를 입력
+        //15세 미만 65세 이상 입장료 2000원
+        //14세 이상 20세 미만 입장료 4000원
+        //그외 6000원
+
+        var age = prompt("나이 입력:", '');
+        var admissononFee = '';
+        if (age < 13 ||age >=65){
+            admissononFee = '2,000원';
+        }else if(age >= 13 && age < 20){
+            admissononFee = '4,000원';
+        }else{
+            admissononFee = '6,000원';
+        }
+        document.write(admissononFee);
+    </script>
+</body>
+</html>

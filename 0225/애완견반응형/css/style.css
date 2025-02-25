@@ -1,0 +1,274 @@
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: #333;}
+
+
+@media screen and (min-width: 1100px) {
+    #wrapper{
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    header{
+        height: 210px;
+        background: #f46075 url(../img/nav2.png) no-repeat 95% 50%;
+    }
+    header h1{
+        float: left;
+        margin-top: 50px;
+        margin-left: 50px;
+        color: white;
+    }
+    nav{
+        height: 60px;
+        background-color: #999;
+    }
+    nav ul li{
+        float: left;
+        width: 16.6666%;
+        height: 60px;
+    }
+    nav ul li a{
+        /* background-color: yellowgreen; */
+        display: block;
+        width: 100%;
+        line-height: 60px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+    }
+    nav ul li a:hover{
+        background-color: aquamarine;
+        color: black;
+    }
+
+    section{
+        width: 700px;
+        height: 550px;
+        float: left;
+        background-color: #ccc;
+    }
+    section h2{
+        margin: 10px 0;
+        text-align: center;
+    }
+    section article{
+        border: 1px solid #333;
+        width: 290px;
+        height: 200px;
+        padding: 10px;
+        float: left;
+        margin-left: 25px;
+        margin-bottom: 25px;
+    }
+    section article h3{
+        padding-bottom: 10px;
+    }
+    section article p{
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    aside{
+        width: 300px;
+        height: 550px;
+        float: left;
+        background-color: yellowgreen;
+        text-align: center;
+    }
+    aside h2{
+        margin: 10px 0;
+    }
+    aside img{
+        margin-bottom: 10px;
+    }
+    footer{
+        clear: both;
+        height: 50px;
+        line-height: 50px;
+        background-color: #333;
+        color: white;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    #wrapper{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    header{
+        height: 120px;
+        background: #f46075 url(../img/nav2.png) no-repeat 95% 50%;
+        background-size: 120px;
+    }
+    header h1{
+        float: left;
+        margin-top: 25px;
+        margin-left: 25px;
+        color: white;
+    }
+    nav{
+        height: 120px;
+        background-color: #999;
+    }
+    nav ul li{
+        float: left;
+        width: 33.3333%;
+        height: 60px;
+    }
+    nav ul li a{
+        /* background-color: yellowgreen; */
+        display: block;
+        width: 100%;
+        line-height: 60px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+    }
+    nav ul li a:hover{
+        background-color: aquamarine;
+        color: black;
+    }
+
+    section{
+        width: 100%;
+        height: auto;
+        background-color: #ccc;
+        padding-bottom: 10px;
+    }
+    section h2{
+        padding: 10px 0;
+        text-align: center;
+    }
+    section article{
+        border: 1px solid #333;
+        width: 90%;
+        height: auto;
+        margin: 0px auto 20px;
+        padding: 10px;
+    }
+    section article h3{
+        padding-bottom: 10px;
+    }
+    section article p{
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    aside{
+        width: 100%;
+        height: auto;
+        background-color: yellowgreen;
+        text-align: center;
+    }
+    aside h2{
+        padding: 10px 0;
+    }
+    aside img{
+        width: 65%;
+        height: auto;
+        margin : 0 auto 10px;
+    }
+    footer{
+        clear: both;
+        height: 50px;
+        line-height: 50px;
+        background-color: #333;
+        color: white;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1099px) {
+    #wrapper{
+        width: 590px;
+        margin: 0 auto;
+    }
+
+    header{
+        height: 120px;
+        background: #f46075 url(../img/nav2.png) no-repeat 95% 50%;
+        background-size: 120px;
+    }
+    header h1{
+        float: left;
+        margin-top: 25px;
+        margin-left: 25px;
+        color: white;
+    }
+    nav{
+        height: 80px;
+        background-color: #999;
+    }
+    nav ul li{
+        float: left;
+        width: 33.3333%;
+        height: 40px;
+    }
+    nav ul li a{
+        /* background-color: yellowgreen; */
+        display: block;
+        width: 100%;
+        line-height: 40px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+    }
+    nav ul li a:hover{
+        background-color: aquamarine;
+        color: black;
+    }
+
+    section{
+        width: 100%;
+        height: 550px;
+        background-color: #ccc;
+        padding-top: 10px;
+    }
+    section h2{
+        padding: 10px 0;
+        text-align: center;
+    }
+    section article{
+        border: 1px solid #333;
+        width: 235px;
+        height: 210px;
+        float: left;
+        margin-left: 25px;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+    section article h3{
+        padding-bottom: 10px;
+    }
+    section article p{
+        font-size: 13px;
+        text-align: justify;
+    }
+
+    aside{
+        width: 100%;
+        height: auto;
+        padding-top: 10px;
+        background-color: yellowgreen;
+        text-align: center;
+    }
+    aside h2{
+        margin: 10px 0;
+    }
+    aside img{
+        margin-bottom: 10px;
+        vertical-align: top;
+    }
+    footer{
+        clear: both;
+        height: 50px;
+        line-height: 50px;
+        background-color: #333;
+        color: white;
+        text-align: center;
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for5-1</title>
+</head>
+<body>
+    <script>
+        var table = '<table border="1">'
+        var sum = 0;
+        var a = 0;
+        for (var i = 2; i <= 9; i++) {
+            // document.write(i + '<br>');
+            table += '<tr>';
+            for(var j = 1; j <= 9 ; j++){
+                table += "<td>" + i + "X" + j + "=" + (i * j) + "</td>";
+            }
+            table += '</tr>';
+        }
+        table += '</table>';
+        console.log(table);
+        document.write(table);
+
+        // 백틱 `
+        for (var i = 2; i <= 9; i++) {
+            document.write(i + '단 <br>');
+            for(var j = 1; j <= 9 ; j++){
+                document.write(`${i} X ${j} = ${i*j}<br>`);
+            }
+        }
+        
+    </script>
+</body>
+</html>
