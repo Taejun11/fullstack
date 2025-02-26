@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gval2</title>
+</head>
+<body>
+    <script>
+        var name = '전역변수';
+        function printName() {
+            var name = '지역변수';
+            console.log(name);
+            // 지역변수와 전역변수의 이름이 같을 경우 지역변수 우선
+        }
+        printName();
+        console.log(name);
+        // 함수 외부에선 전역변수 호출
+    </script>
+</body>
+</html>

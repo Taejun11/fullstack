@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date2</title>
+</head>
+<body>
+    <script>
+        // var today = new Date();
+        // alert(today);
+        // var year = today.getFullYear();
+        // alert(year);
+
+        var today = new Date();
+        
+        var year = today.getFullYear();
+        var month = today.getMonth() + 1;
+        var date = today.getDate();
+        var day = today.getDay();
+        var hours = today.getHours();
+        var minutes = today.getMinutes();
+        var seconds = today.getSeconds();
+
+        switch (day) {
+            case 0:
+                day = '일요일';
+                break;
+            case 1:
+                day = '월요일';
+                break;
+            case 2:
+                day = '화요일';
+                break;
+            case 3:
+                day = '수요일';
+                break;
+            case 4:
+                day = '목요일';
+                break;
+            case 5:
+                day = '금요일';
+                break;
+            case 6:
+                day = '토요일';
+                break;
+            default:
+                break;
+        }
+
+        // if (day == 0) {
+        //     day = '일요일';
+        // }else if(day == 1){
+        //     day = '월요일';
+        // }else if(day == 2){
+        //     day = '화요일';
+        // }else if(day == 3){
+        //     day = '수요일';
+        // }else if(day == 4){
+        //     day = '목요일';
+        // }else if(day == 5){
+        //     day = '금요일';
+        // }else if(day == 6){
+        //     day = '토요일';
+        // }
+        // var today1 = new Date(2025, 2, 26);
+        // alert(today1);
+
+        document.write(`${year}년 ${month}월 ${date}일 ${day} ${hours}시 ${minutes}분 ${seconds}초`);
+    </script>
+</body>
+</html>

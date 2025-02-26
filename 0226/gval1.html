@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gval1</title>
+</head>
+<body>
+    <script>
+        var globalMes = '전역변수';
+        function showMes() {
+            var localMes = '지역변수';
+            console.log(globalMes);
+            console.log(localMes);
+        }
+        showMes();
+        console.log(globalMes);
+        console.log(localMes);
+    </script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Play&display=swap');
+
+*{margin:0;padding:0;}
+ul{list-style:none;}
+a{text-decoration:none;color:#bbb;}
+img{border: 0;}
+
+/* 풀스크린으로 동작하도록 지정(스크롤바 제거) */
+body{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+}
+.vid{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.vid video{
+    width: 100%;
+    min-width: 1920px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* display: none; */
+}
+
+h1{/*왼쪽 위 로고*/
+    position: fixed;
+    z-index: 10;
+    top: 30px;
+    left: 30px;
+}
+/* 메뉴 */
+header{/*오른쪽 메뉴 전체적인 크기 및 형태*/
+    position: fixed;
+    transform: skew(30deg);
+    background-color: #bbbbbb73;
+    right: -500px;
+    width: 1000px;
+    height: 100%;
+}
+
+#gnb{/*1차메뉴 전체적인 위치 크기*/
+    /* background-color: black; */
+    position: fixed;
+    left: 0;
+    top: 150px;
+    width: 220px;
+}
+#gnb> li{/*직속 1차메뉴*/
+    position: relative;
+}
+#gnb> li> a{/*직속 1차메뉴 글씨*/
+    display: block;
+    width: 220px;
+    height: 50px;
+    color: black;
+    text-align: left;
+    font: bold 20px/3 play;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+#gnb em{/*메뉴 모든 글씨 블록 및 찌그림 해제*/
+    display: inline-block;
+    transform: skew(-30deg);
+}
+#gnb> li.on>a, #gnb> li:hover a{/*맨 위 home메뉴 및 다른 메뉴에 마우스 올렸을 때 색깔 바뀜*/
+    background-color: #383838;
+    color: white;
+}
+#gnb li ul{/*평상시에 2차메뉴 안보임*/
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+#gnb li:hover ul{/*메뉴에 마우스 올렸을 때 오른쪽으로 2차메뉴 보임*/
+    right: 220px;
+    opacity: 1;
+    visibility: visible;
+}
+#gnb ul a{/*메뉴들 글씨체 크기 색깔 바닥색깔*/
+    display: block;
+    width: 220px;
+    padding-left: 70px;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    font: bold 18px/3 arial; 
+    transition: all 0.5s;   
+}
+#gnb ul a:hover{/*세부메뉴에 마우스 올렸을 때 세부메뉴 색깔 변경*/
+    background-color: #bbbbbb73;
+    color: #333;
+}
+
+/* 오른쪽 위 sns버튼 */
+.sns{/*sns버튼 위치*/
+    position: fixed;
+    right: 50px;
+    top: 60px;
+}
+.sns li{/*sns버튼 정렬, 간격 조절*/
+    float: left;
+    margin-right: 40px;
+}
+.sns .fa{/*마우스 대지 않았을 때 sns버튼*/
+    font-size: 25px;
+    color: #383838;
+    opacity: 0.6;
+    transform: scale(1);
+    transition: all 0.5s;
+}
+.sns .fa:hover{/*마우스 댔을 때 sns 버튼*/
+    font-size: 25px;
+    opacity: 1;
+    transform: scale(2);
+}
+
+/*로고 밑에 있는 텍스트박스*/
+.txtbox{
+    position: fixed;
+    top: 300px;
+    left: 150px;
+    /* border: 1px solid white; */
+    width: 340px;
+    height: 280px;
+}
+.txt{/*텍스트박스 아래에 있는 문장*/
+    position: absolute;
+    font-family: Play;
+    left: 0;
+    top: 200px;
+    color: white;
+    font-size: 34px;
+    letter-spacing: -2px;
+}
+.txt strong{/*텍스트박스 아래에 있는 문장 중 adidas*/
+    margin-left: 20px;
+    font: bold 34px arial;
+    color: #585858;
+}
+
+.tit{/*텍스트박스 위에 있는 문장*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #585858;
+    font-size: 160px;
+    font-family: monoton;
+    letter-spacing: -1px;
+}
+.tit em{/*텍스트박스 위에 있는 문장 중 /24*/
+    font-size: 50px;
+    font-family: play;
+    color: white;
+}
+
+/* 왼쪽에 있는 마우스 대면 오른쪽으로 오는 사이드바 */
+.side{/*사이드바 위치 크기 효과*/
+    background-color: #585858;
+    transform: skew(30deg);
+    position: fixed;
+    bottom: 0;
+    width: 600px;
+    height: 100%;
+    left: -700px;
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+.side:hover{/*사이드바에 마우스 대면 오른쪽으로 오는 효과*/
+    left: -400px;
+    opacity: 0.8;
+}
+.side:hover .con{/*사이드바에 마우스 대면 오른쪽으로 오는 컨텐츠들 박스 위치*/
+    right: 50px;
+}
+
+.side .con{/*사이드바 컨텐츠박스 크기 위치*/
+    position: absolute;
+    width: 500px;
+    height: 100%;
+    bottom: 0;
+    right: 200px;
+    transition: all 1s;
+    background-color: #bbbbbb73;
+}
+.side .con p{/*사이드바 컨텐츠 각자의 크기 위치*/
+    width: 180px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.side p img{/*사이드바 컨텐츠 이미지 크기*/
+    width: 150px;
+    height: 80px;
+}
+.side .con p:nth-child(1){/*첫번째 사이드바 컨텐츠 이미지 위치 숨겨놓음*/
+    bottom: 290px;
+    transform: translate(-200px);
+    transition: all 0.4s;
+}
+.side .con p:nth-child(2){/*두번째 사이드바 컨텐츠 이미지 위치 숨겨놓음*/
+    bottom: 170px;
+    transform: translate(-200px);
+    transition: all 0.8s;
+}
+.side .con p:nth-child(3){/*세번째 사이드바 컨텐츠 이미지 위치 숨겨놓음*/
+    bottom: 50px;
+    transform: translate(-200px);
+    transition: all 1.2s;
+}
+.side .con:hover p{/*사이드바에 마우스 대면 컨텐츠 이미지들 제 위치로*/
+    transform: translate(0);
+}
+.side:hover .con p em{/*사이드바 컨텐츠 이미지 위에 있는 글씨 되돌려놓음*/
+    display: inline-block;
+    transform: skewX(-30deg);
+    font: bold 16px/1.7 arial;
+}
+.side:hover .con p img{/*사이드바 컨텐츠 이미지 위에 마우스 올려 놓기 전*/
+    opacity: 0.3;
+    transition: all 0.6s;
+}
+.side:hover .con p img:hover{/*사이드바 컨텐츠 이미지 위에 마우스 올려 놓을 때*/
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.side .btn{/*사이드바를 가리켜주는 화살표 기본 설정*/
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    bottom: 100px;
+    right: -60px;
+    color: #fff ;
+    transform: skewX(-40deg);
+    /* border: 1px solid #fff; */
+}
+.btn i{/*버튼 크기 위치*/
+    font-size: 60px;
+    position: absolute;
+    left: 0;
+}
+.btn i:nth-child(1){/*첫번째 버튼 애니메이션*/
+    animation: ani linear 1.2s 0s infinite;
+}
+.btn i:nth-child(2){/*두번째 버튼 애니메이션*/
+    animation: ani linear 1.2s 0.3s infinite;
+}
+.btn i:nth-child(3){/*세번째 버튼 애니메이션*/
+    animation: ani linear 1.2s 0.6s infinite;
+}
+.btn i:nth-child(4){/*네번째 버튼 애니메이션*/
+    animation: ani linear 1.2s 0.9s infinite;
+}
+.btn i:nth-child(5){/*다섯번째 버튼 애니메이션*/
+    animation: ani linear 1.2s 1.2s infinite;
+}
+
+@keyframes ani{/*버튼 애니메이션 부드럽게*/
+    0%{
+        left: 0;
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        left: 150px;
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+.side:hover .btn{/*사이드바에 마우스 댔을 때 화살표 버튼 치움*/
+    right: 700px;
+}

@@ -4,17 +4,10 @@
     .wrap{
         width:900px;
         margin: 0 auto;
-        /* background-color: #999; */
     }
     header{
         position: relative;
         height:300px;
-        /* border: 1px solid #333; */
-        /* background-image: url('../images/top.jpg');
-        background-repeat: no-repeat;
-        background-position: 0 0; left top 동일
-        background-size: cover; */
-        /*화면꽉차게*/
         background:url('../images/top.jpg') no-repeat 0 0 / cover ;
     } 
     header h1{
@@ -104,7 +97,6 @@
         padding-bottom: 15px;
     }
     footer{
-        /* margin-top: 200px; */
         clear: both;
         height:60px;
         line-height: 60px;

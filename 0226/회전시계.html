@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회전시계</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #clock{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 100px auto 0;
+            border: 1px solid black;
+        }
+        #clock img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <span id="year">0000</span>년
+        <span id="month">00</span>월
+        <span id="date">00</span>일
+        <span id="day">0</span>
+        <span id="hours">00</span>시
+        <span id="minutes">00</span>분
+        <span id="seconds">00</span>초
+    </h1>
+
+    <div id="clock">
+        <img src="images/clock.png" alt="시계" id="clock1">
+        <img src="images/h.png" alt="시침" id="hour1">
+        <img src="images/m.png" alt="분침" id="minute1">
+        <img src="images/s.png" alt="초침" id="second1">
+    </div>
+
+    <script>
+        setInterval(autoTime, 1000);
+        
+        function autoTime(){
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = today.getMonth() + 1;
+            var date = today.getDate();
+            var day = today.getDay();
+            var hours = today.getHours();
+            var minutes = today.getMinutes();
+            var seconds = today.getSeconds();
+
+        switch (day) {
+            case 0:
+                day = '일요일';
+                break;
+            case 1:
+                day = '월요일';
+                break;
+            case 2:
+                day = '화요일';
+                break;
+            case 3:
+                day = '수요일';
+                break;
+            case 4:
+                day = '목요일';
+                break;
+            case 5:
+                day = '금요일';
+                break;
+            case 6:
+                day = '토요일';
+                break;
+            default:
+                break;
+        }
+
+        // if (day == 0) {
+        //     day = '일요일';
+        // }else if(day == 1){
+        //     day = '월요일';
+        // }else if(day == 2){
+        //     day = '화요일';
+        // }else if(day == 3){
+        //     day = '수요일';
+        // }else if(day == 4){
+        //     day = '목요일';
+        // }else if(day == 5){
+        //     day = '금요일';
+        // }else if(day == 6){
+        //     day = '토요일';
+        // }
+        // var today1 = new Date(2025, 2, 26);
+        // alert(today1);
+
+        // document.write(`${year}년 ${month}월 ${date}일 ${day} ${hours}시 ${minutes}분 ${seconds}초`);
+
+        document.getElementById('year').innerHTML = year
+        document.getElementById('month').innerHTML = month
+        document.getElementById('date').innerHTML = date
+        document.getElementById('day').innerHTML = day
+        document.getElementById('hours').innerHTML = hours
+        document.getElementById('minutes').innerHTML = minutes
+        document.getElementById('seconds').innerHTML = seconds
+        // 아이디 선택 방법
+        var si = document.getElementById('hour1');
+        var bun = document.getElementById('minute1');
+        var cho = document.getElementById('second1');
+
+        var ds = seconds * 6; //초침은 1초에 6도씩 움직여야 시계에 맞음
+        var dm = minutes * 6; //분침은 1분에 6도씩 움직여야 시계에 맞음
+        var dh = (hours * 30) + (minutes * 0.5); //시침은 1시간에 30도씩 움직여야 시계에 맞음
+        // var dhh = minutes * 0.5; 
+
+        cho.style.transform = "rotate("+ds+"deg)";
+        bun.style.transform = "rotate("+dm+"deg)";
+        si.style.transform = "rotate("+dh+"deg)";
+        // si.style.transform = "rotate("+dhh+"deg)";
+    }
+    </script>
+</body>
+</html>
