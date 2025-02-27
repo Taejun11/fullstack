@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숙제</title>
+</head>
+<body>
+    <!-- 문제 1: 문자열 길이 구하기
+사용자가 입력한 문자열을 받아 **문자 개수(길이)**를 출력하세요.
+
+"Hello, JavaScript!"
+
+문자열 길이: 18 -->
+
+    <script>//문제 1
+        var pro1 = prompt("문제 1 문자열을 입력하세요");
+        console.log(`문제 1 문자열 길이: ${pro1.length}`);
+        // var pro1 = "Hello, JavaScript!";
+        // var q1 = pro1.length;
+        // document.write("문제 1 ");
+        // document.write("Hello, JavaScript!" + '<br>');
+        // document.write(`문자열 길이: ${q1}<br>`);
+        // document.write('----------------------------------------------------<br>');
+
+
+    </script>
+
+<!-- 문제 2: 특정 문자 찾기 (indexOf)
+문자열: "programming"
+찾을 문자: "g"
+
+예시출력
+문자 "g"는 3번째 인덱스에 있습니다. -->
+
+    <script>//문제 2
+        var pro2 = prompt("문제 2 문자열을 입력하세요");
+        var char = prompt("문제 2 찾는 문자열을 입력하세요");
+        var q2 =pro2.indexOf(char);
+        //console.log(index);
+        if (q2 !== -1) {
+            console.log(`문자 "${char}"는 ${q2}번째 인덱스에 있습니다.`);
+        } else {
+            console.log(`문자 "${char}"는 문자열에 존재하지 않습니다.`);
+        }
+        // var pro2 = "programming";
+        // var q2 = pro2.indexOf('g');
+        // document.write("문제 2 ");
+        // document.write("programming" + '<br>');
+        // document.write(`문자 "g"는 ${q2}번째 인덱스에 있습니다.<br>`);
+        // document.write('----------------------------------------------------<br>');
+    </script>
+
+
+<!-- 문제 3: 문자열 대문자로 변환 (toUpperCase)
+사용자가 입력한 문자열을 대문자로 변환하세요.
+
+예시 입력
+
+"javascript is fun"
+예시 출력
+
+"JAVASCRIPT IS FUN" -->
+    <script>//문제 3
+        let pro3 = prompt("문제 3 문자열을 입력하세요:");
+        console.log(pro3.toUpperCase());
+        // var pro3 = "javascript is fun";
+        // var q3 = pro3.toUpperCase();
+        // document.write("문제 3 ");
+        // document.write(q3 + '<br>');
+        // document.write('----------------------------------------------------<br>');
+    </script>
+
+
+<!-- 문제 4: 특정 단어 포함 여부 (includes)
+문자열에 특정 단어가 포함되어 있는지 확인하세요.
+
+예시 입력
+
+문자열: "I love JavaScript!"
+찾을 단어: "love"
+예시 출력
+
+"love" 단어가 포함되어 있습니다. -->
+
+    <script>//문제 4
+        var pro4 = prompt("문제 4 문자열을 입력하세요:");
+        var q4 = prompt("문제 4 찾을 단어를 입력하세요:");
+
+        if (pro4.includes(q4)) {
+            console.log(`"${q4}" 단어가 포함되어 있습니다.`);
+        } else {
+            console.log(`"${q4}" 단어가 포함되지 않았습니다.`);
+        }
+        // var pro4 = "I love JavaScript!";
+        // var q4 = pro4.includes("love");
+        // document.write("문제 4 ");
+        // if (q4 == true) {
+        //     document.write(`"love" 단어가 포함되어 있습니다.<br>`);
+        // }
+        // document.write('----------------------------------------------------<br>');
+    </script>
+
+
+
+<!-- 문제 8: 특정 문자 개수 세기
+문자열에서 특정 문자가 몇 번 등장하는지 세어보세요.
+
+예시 입력
+
+문자열: "banana"
+찾을 문자: "a"
+예시 출력
+
+"a"는 3번 등장합니다. -->
+
+    <script>//문제 8
+        var pro8 = prompt("문제 8 문자열을 입력하세요:");
+        var q8 = prompt("문제 8 찾을 단어를 입력하세요:");
+        if (pro8.includes(q8)) {
+            console.log(`"${q8}" 은 ${pro8.split(q8).length - 1}번 등장합니다.`);
+        } else {
+            console.log(`"${q8}" 단어가 포함되지 않았습니다.`);
+        }
+
+        // var pro8 = "banana";
+        // var q8 = pro8.split('a').length - 1;
+        // document.write("문제 8 ");
+        // document.write(`'a'는 ${q8}번 등장합니다.<br>`);
+        // document.write('----------------------------------------------------<br>');
+    </script>
+
+<!-- 문제 9: 문자열 교체 (replace)
+문자열에서 특정 단어를 다른 단어로 변경하세요.
+
+예시 입력
+
+문자열: "I love Python!"
+바꿀 단어: "Python"
+새로운 단어: "JavaScript"
+예시 출력
+
+"I love JavaScript!" -->
+
+    <script>//문제 9
+        // var pro9 = "I love Python!";
+        // var q9 = pro9.replace("Python", 'JavaScript');
+        // document.write("문제 9 ");
+        // document.write(q9 + '<br>');
+        // document.write('----------------------------------------------------<br>');
+    </script>
+
+
+<!-- 문제 10: 문자열을 배열로 변환 (split)
+사용자가 입력한 문자열을 공백 기준으로 배열로 변환하세요.
+
+예시 입력
+
+"apple banana orange"
+예시 출력
+
+["apple", "banana", "orange"] -->
+
+    <script>//문제 10
+        var pro10 = "apple banana orange";
+        var q10 = pro10.split(' ');
+        // for(var i in q10){
+        //     console.log(q10[i] );
+        // }
+        console.log(q10);
+        // document.write("문제 10 ");
+        // document.write(`${q10[0]} , ${q10[1]} , ${q10[2]}`);
+    </script>
+
+
+</body>
+</html>

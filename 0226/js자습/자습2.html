@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자습2</title>
+
+    <script>
+        // 숫자 세자리수마다 , 붙여주는 함수(못하겠음)
+        function comma(money) {
+            var i = String(money);
+            for (i; i>money ;i+3) {
+                i += ','
+            }
+            return i;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var money = String(prompt('자릿수를 구별하고 싶은 숫자를 입력해주세요.',''));
+        if (money < 0) {
+            // 음수 자릿수
+            console.log(comma(money));
+        }else if (money == 0) {
+            console.log('0');
+        }else{
+            // 양수 자릿수
+            console.log(comma(money));
+        }
+    </script>
+</body>
+</html>

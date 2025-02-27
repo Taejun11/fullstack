@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string객체</title>
+</head>
+<body>
+    <script>
+        //charAt 해당 인덱스의 문자 하나 추출
+        var str = "javascript";
+        console.log(str.charAt(5));
+        // indexOf 해당 단어가 포함되어 있으면 return 인덱스번호, 없으면 return -1
+        console.log(str.indexOf('a'));
+        console.log(str.indexOf('k'));
+        // lastIndexOf 뒤에서 부터 찾아줌
+        console.log(str.lastIndexOf('a'));
+        // includes 해당 단어가 포함되어 있으면 retrun true 없으면 return false
+        console.log(str.includes('script'));
+        
+        var str = 'http://icoxpublish.com/';
+        console.log(str.substring((0, 4))); // 0번부터 4번까지빼고
+        console.log(str.substring(7));      // 7번부터 끝까지
+        console.log(str.substr(7, 4));      // 7번부터 4글자
+
+        var str = 'javascript_jquary';
+        // split 해당 단어를 기준으로 배열을 나눔
+        var division = str.split('_');
+        console.log(division[0] + ' , ' + division[1]);
+
+        // replace 해당 단어를 다른 단어로 바꿈
+        var str = 'm_out.gif';
+        console.log(str.replace('out' , 'over'));
+
+        // concat 두 문자를 연결해줌
+        var str1 = 'nav';
+        var str2 = '_bg';
+        console.log(str1.concat(str2));
+        // trim 문자열의 공백을 제거해줌
+        var str = ' removeblank '
+        console.log(str.trim());
+
+        // toLowerCase 문자열을 모두 소문자로 바꿔줌
+        var str = 'LowerCase'
+        console.log(str.toLowerCase());
+        // toUpperCase 문자열을 모두 대문자로 바꿔줌
+        var str = 'UpperCase'
+        console.log(str.toUpperCase());
+    </script>
+</body>
+</html>

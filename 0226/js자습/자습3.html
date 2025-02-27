@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자습3</title>
+
+    <script>
+        // 수수료를 제하고 받을 원가를 받기 위해 원가를 얼마로 해야 하는지 계산해주는 함수(완료)
+        function tax(result, percent) {
+            var money = (result * (percent * 0.01)) / (1 - (percent * 0.01)); // 원가에 더해야 할 숫자
+            if (percent == 0) {
+                return result;
+            }else{
+                return money;
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var result = Number(prompt('받고싶은 원 금액을 입력해주세요.',''));
+        var percent = prompt('수수료 비율을 정수로 입력해주세요.','');
+        if (percent < 0) {
+            console.log('수수료 계산 오류, 수수료를 양수로 입력해주세요.');
+        }else if (result < 0) {
+            console.log('원금액 계산 오류, 원금액을 양수로 입력해주세요.');
+        }else{
+            var tax_result = tax(result, percent);
+            console.log(`수수료 ${percent}%에 대하여 원가 ${result}원을 받기 위해 설정해야할 금액은  ${Number(tax_result) + Number(result)}원`);
+        }
+    </script>
+</body>
+</html>
