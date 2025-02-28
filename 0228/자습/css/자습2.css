@@ -1,0 +1,23 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+#m1{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+#m2{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 300px;
+    right: 30px;
+}
+#m3{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 80px;
+    left: 150px;
+}

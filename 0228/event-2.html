@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event-2</title>
+</head>
+<body>
+    <div id="change">
+        글자색바꾸기
+    </div>
+
+    <p>Reprehenderit tempor do quis sunt eu et exercitation deserunt. Laboris adipisicing est sint aliquip nulla pariatur velit irure elit qui id. Dolore aliquip dolore eu ut irure sint Lorem reprehenderit velit. Duis veniam irure cillum anim excepteur culpa pariatur sunt esse. Eu nulla commodo velit ex id dolore incididunt mollit incididunt nisi labore culpa qui ea. Commodo veniam veniam in ipsum ad minim occaecat qui pariatur adipisicing laborum quis.</p>
+
+</body>
+</html>
+
+<!-- // 방법 1 웹 요소를 변수로 지정 & 미리 만든 함수 사용 -->
+<!-- <script>
+    // 웹 요소를 변수로 지정
+    var changeBtn = document.querySelector('#change');
+
+    changeBtn.onclick = changecolor;
+    // 미리 만든 함수 사용
+    function changecolor() {
+        document.querySelector('p').style.color = "red";
+    }
+</script> -->
+
+<!-- // 방법 2 웹 요소를 변수로 만들지 않고 사용 -->
+<!-- <script>
+    // 웹 요소를 변수로 만들지 않고 바로 사용
+    document.querySelector('#change').onclick = changecolor;
+
+    // 미리 만든 함수 사용
+    function changecolor() {
+        document.querySelector('p').style.color = "red";
+    }
+</script> -->
+
+<!-- // 방법 3 직접 함수를 선언 -->
+<script>
+    // 웹 요소를 변수로 만들지 않고 바로 사용 & 익명함수로 바로 선언
+    document.querySelector('#change').onclick = function(){
+        document.querySelector('p').style.color = "red";
+    };
+
+</script>

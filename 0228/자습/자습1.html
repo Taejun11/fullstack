@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자습1</title>
+    <link rel="stylesheet" href="css/자습1.css">
+    <!-- 사칙연산 계산기 (실패)-->
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1 id="h1">adsasd</h1><!-- 숫자 출력 구간 -->
+        </header>
+        <section>
+            <table id="bot"> <!-- 자판 -->
+                <tr class="line line1">
+                    <td colspan='2' class="clickC">C</td>
+                    <td colspan='2' class="clickRes">=</td>
+                </tr>
+                <tr class="line line2">
+                    <td class="numBtn">7</td>
+                    <td class="numBtn">8</td>
+                    <td class="numBtn">9</td>
+                    <td class="clickDiv">/</td>
+                </tr>
+                <tr class="line line3">
+                    <td class="numBtn">4</td>
+                    <td class="numBtn">5</td>
+                    <td class="numBtn">6</td>
+                    <td class="clickMult">*</td>
+                </tr>
+                <tr class="line line4">
+                    <td class="numBtn">1</td>
+                    <td class="numBtn">2</td>
+                    <td class="numBtn">3</td>
+                    <td class="clickMin">-</td>
+                </tr>
+                <tr class="line line5">
+                    <td class="clickPtoM">+/-</td>
+                    <td class="numBtn">0</td>
+                    <td class="clickDec">.</td>
+                    <td class="clickPlu">+</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
+
+
+
+<script>
+    var header = document.querySelector("#h1");
+    var respone = document.querySelectorAll("#click");
+    // document.querySelectorAll("#click").onclick = function() {
+    //     document.querySelector('h1').style.color='red';
+    // };
+    respone.onclick = function() {
+        header.style.color = 'red';
+    }
+
+</script>

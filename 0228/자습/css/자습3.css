@@ -1,0 +1,25 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+header{
+    width: 1500px;
+    display: flex;
+    background-color: dodgerblue;
+    margin: 0 auto;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    flex: auto;
+    margin: 10px;
+}
+.box1{background-color: aquamarine;}
+.box2{background-color: blueviolet;}
+.box3{background-color: palegreen;}
+.box4{background-color: mintcream;}
+
+@media screen and (max-width: 1000px) {
+    header{
+        width: 100px;
+    }
+}

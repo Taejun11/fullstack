@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event-1</title>
+    <link rel="stylesheet" href="css/function.css">
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#" onclick="return changeBg('green')">green</a>
+        </li>
+        <li>
+            <a href="#" onclick="return changeBg('orange')">orange</a>
+        </li>
+            
+        <li>
+            <a href="#" onclick="return changeBg('purple')">purple</a>
+        </li>
+            
+        
+    </ul>
+    <div id="result"></div>
+
+    <script>
+        function changeBg(color) {
+            const list = document.querySelectorAll('li');// li를 찾아주는 명령
+
+            list.forEach(item => item.classList.remove('on'));
+            event.target.parentElement.classList.add('on');//list에 class on 추가하는 명령
+            
+
+            // var result = document.getElementById('result');
+            var result = document.querySelector('#result');//#result를 찾아 주는 명령
+            result.style.backgroundColor = color;
+            return false;//a태그에서 스크롤이 위로 올라가는 것 방지
+            // a 링크 금지
+
+        }
+    </script>
+</body>
+</html>
