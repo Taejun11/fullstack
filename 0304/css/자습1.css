@@ -1,0 +1,34 @@
+*{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+
+/* 640 480 */
+header{
+    width: 640px;
+    height: 300px;
+    background-color: gray;
+    margin: 0 auto;
+}
+#wrap{
+    width: 640px;
+    height: 1000px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+#banner{
+    width: 3000px;
+    height: 480px;
+}
+#banner li{
+    float: left;
+}
+#prev{
+    position: absolute;
+    top: 500px;
+    left: 0px;
+}
+#next{
+    position: absolute;
+    top: 500px;
+    right: 00px;
+}
