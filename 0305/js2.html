@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2</title>
+</head>
+<body>
+    <script>
+        var a = true;
+        var b = false;
+        var c = 10 > 5; //true
+        var d = Boolean(null); //false
+        // Booleane: 데이터가 있으면 true, 없으면 false
+
+        document.write(a, '<br>');
+        document.write(b, '<br>');
+        document.write(c, '<br>');
+        document.write(d, '<br>');
+
+        var num = 100;
+        var str = '자바스크립트';
+        var num = 10; //변수의 첫글자로는 $, _, 영문자 등이 가능
+        // 예약어, 숫자는 불가능
+        var s;
+        document.write(s,'<br>'); //undefined 변수는 초기값이 있어야 함
+
+        document.write(typeof num,'<br>'); //number
+        document.write(typeof str,'<br>'); //string
+
+        var t1 = '학교종이';
+        var t2 = '땡땡떙';
+        var result = t1 + t2;
+        document.write(result,'<br>');
+
+        var str1 = '<table border = "1">';
+        str1 += '<tr>';
+        str1 += '<td>1</td><td>2</td><td>3</td>';
+        str1 += '</tr>';
+        str1 += '</table>';
+        console.log(str1);
+        document.write(str1);
+    </script>
+</body>
+</html>

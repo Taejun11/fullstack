@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array3</title>
+</head>
+<body>
+    <script>
+        var greenArr = ["교대", "방배", "강남"];
+        var yellowArr = ["미금","정자","수서"];
+
+        greenArr.splice(2, 1, '서초', '역삼');
+        console.log(greenArr);
+        // 2번 인덱스부터 1개 배열 삭제 후 뒤에 적은 내용으로 배열 추가
+
+        var data1 = yellowArr.pop(); //data1 = 수서
+        // 배열의 마지막 인덱스 데이터를 저장
+        var data2 = yellowArr.shift(); //data2 = 미금
+        // 배열의 맨 앞쪽 데이터를 저장
+        yellowArr.push(data2); //data2의 내용을 배열 마지막에 넣음
+        console.log(yellowArr); // 정자 -> 정자, 미금
+        yellowArr.unshift(data1); //data1의 내용을 배열 맨 앞에 넣음
+        console.log(yellowArr); //정자, 미금 -> 수서, 정자, 미금
+    </script>
+</body>
+</html>

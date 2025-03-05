@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>func3</title>
+</head>
+<body>
+    <div id="galleryZone">
+        <p><img src="images/pic_1.jpg" id="photo" alt=""></p>
+        <button onclick="gallery(0)">이전</button>
+        <button onclick="gallery(1)">다음</button>
+    </div>
+
+
+    <script>
+        var num = 1;
+        function gallery(direct) {
+            // 0 false, 1 true
+            if (direct) {
+                // 다음을 누를 때 실행
+                if (num == 8) {
+                    return;
+                }
+                num++;
+            }else{
+                // 이전을 누를 때 실행
+                if (num == 0) {
+                    return;
+                }
+                num--;
+            }
+            var imgTag = document.getElementById('photo');
+            imgTag.setAttribute('src', `images/pic_${num}.jpg`);
+        }
+    </script>
+</body>
+</html>

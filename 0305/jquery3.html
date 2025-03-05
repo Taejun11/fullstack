@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery3</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        ul li.on{background-color: red; color: white;}
+    </style>
+    <script>
+        $(function(){
+            // var list = document.querySelectorAll('ul li');
+            $('ul li').click(function(){
+                // $(this).css('background-color', 'red');
+                $('ul li').removeClass('on'); // 모든 li에 class='on' 제거
+                $(this).addClass('on');
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>1번</li>
+        <li>2번</li>
+        <li>3번</li>
+        <li>4번</li>
+    </ul>
+</body>
+</html>

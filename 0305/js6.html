@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js6</title>
+</head>
+<body>
+    <script>
+        var month = prompt('월을 입력하세요', '0');
+        // 9~11 가을 6~8 여름 3~5 봄 12 1 2 겨울
+        if (month >= 9 && month <= 11) {
+            document.write('가을');
+        }else if (month >= 6 && month <= 8) {
+            document.write('여름');
+        }else if (month >= 3 && month <= 5) {
+            document.write('봄');
+        }else if (month == 12 || month == 1 || month == 2) {
+            document.write('겨울');
+        }else{
+            document.write('없는 달');
+        }
+    </script>
+</body>
+</html>

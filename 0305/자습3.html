@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자습3</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        ul{list-style: none;}
+        .tab_menu{display: flex;}
+        .tab_menu li{
+            padding: 5px;
+            border: 1px solid black;
+        }
+        .tab_list{
+            width: 210px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .tab_menu li.active{
+            background-color: red;
+            color: white;
+        }
+        .tab_list li{display: none;}
+        .tab_list li.on{display: block;}
+    </style>
+    <script>
+        $(function(){
+            $('.tab_menu li').click(function(){
+                var i = $(this).index();
+                $('.tab_menu li').removeClass('active');
+                $('.tab_menu li').eq(i).addClass('active');
+                $('.tab_list li').removeClass('on');
+                $('.tab_list li').eq(i).addClass('on');
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul class="tab_menu">
+        <li class="active">1번</li>
+        <li>2번</li>
+        <li>3번</li>
+        <li>4번</li>
+    </ul>
+    <ul class="tab_list">
+        <li class="on">1번입니다.</li>
+        <li>2번입니다.</li>
+        <li>3번입니다.</li>
+        <li>4번입니다.</li>
+    </ul>
+</body>
+</html>

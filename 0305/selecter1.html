@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selecter1</title>
+    <script>
+        // window.onload = function(){내용}
+        // document.addEventListener('DOMContentLoaded', function(){내용
+
+        
+        // getElement는 #,. 필요 없음
+        // querySelector #,. 필요함
+        // const ele = document.getElementById('myDiv');
+        const ele = document.querySelector('#myDiv');
+        console.log(ele.textContent);
+    
+        // const elem = document.getElementsByClassName('myClass');
+        const elem = document.querySelectorAll('.myClass');
+        console.log(elem[0].textContent);
+        console.log(elem[1].textContent);
+    
+        const para = document.getElementsByTagName('p');
+        console.log(para[0].textContent);
+        console.log(para[1].textContent);
+    // });
+
+    </script>
+
+</head>
+<body>
+    <div id="myDiv">hello world</div>
+    <div class="myClass">First Div</div>
+    <div class="myClass">Second Div</div>
+    <p>paragraph 1</p>
+    <p>paragraph 2</p>
+</body>
+</html>
+
