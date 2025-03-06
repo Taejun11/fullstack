@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <style>
+        *{margin: 0; padding: 0;}
+        div{
+            width: 395px;
+            height: 160px;
+            margin: 50px auto;
+        }
+        body{background-color: #252422;}
+        dl{
+            width: 395px;
+            height: 160px;
+        }
+        dt{
+            width: 25px;
+            height: 160px;
+            float: left;
+        }
+        dt span{
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-indent: -9999px;
+        }
+        dd{
+            width: 320px;
+            height: 160px;
+            float: left;
+            overflow: hidden;
+        }
+        dd img{
+            width: 320px;
+            height: 160px;
+        }
+        /* 탭 기본 배경사진 */
+        dt span{
+            background: url(blue01.png) no-repeat 0 0;
+        }
+        dt span.over{
+            background: url(pink01.png) no-repeat 0 0;
+        }
+        dt span.selected{
+            background: url(orange01.png) no-repeat 0 0;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('dd').css('width', '0px');
+            $('dd').eq(0).css('width', '320px');
+            $('dt:eq(0) span').addClass('selected');
+            $('dt').click(function(){
+                var kkk = $(this).next('dd').css('width');
+                // alert(kkk);
+                if (kkk == '0px') {
+                    $('dt:has(.selected)').next('dd').stop().animate({width:'0px'},500);
+                    $(this).next('dd').animate({width:'320px'},500);
+                    $('dt span').removeClass('selected');
+                    $(this).find('span').addClass('selected');
+                }
+            });
+
+            $('dt').hover(function(){
+                $(this).find('span').addClass('over');
+            }, function(){
+                $(this).find('span').removeClass('over');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <dl>
+            <dt><span>step</span></dt>
+            <dd><img src="menuimg01.jpg" alt=""></dd><!--내용-->
+            <dt><span>step</span></dt>
+            <dd><img src="menuimg02.jpg" alt=""></dd><!--내용-->
+            <dt><span>step</span></dt>
+            <dd><img src="menuimg03.jpg" alt=""></dd><!--내용-->
+        </dl>
+    </div>
+</body>
+</html>
