@@ -1,0 +1,63 @@
+*{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none;}
+body{
+    font-size: 16px;
+    color: #666;
+}
+
+/*  wrap 안에 header 안에 content 안에 요소들 */
+
+/* header */
+#header{/*헤더 전체 크기*/
+    border-top: 5px solid #009223;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 165px;
+    background-color: white;
+}
+#header .content{
+    max-width: 1170px;
+}
+#header .logo{/*로고 위치*/
+    position: absolute;
+    left: 50%;
+    top: 35px;
+    margin-left: -101px;
+}
+#header .logo a{/*로고를 가둘 크기, 이미지*/
+    display: block;
+    background: url(../imgs/logo_w.png) no-repeat 0 0;
+    text-indent: -9999px;
+    width: 202px;
+    height: 40px;
+    font-size: 0;
+    line-height: 0;
+}
+#header ul li a{/*헤더 탭메뉴 세부사항*/
+    color: #666;
+}
+#header .util_menu{/*로그인, 회원가입 위치*/
+    position: absolute;
+    right: 25px;
+    top: 40px;
+}
+#header .util_menu ul li{
+    float: left;
+    position: relative;
+}
+#header .util_menu ul li a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+}
+#header .util_menu ul li:nth-child(2){
+    margin-left: 30px;
+}
+#header .util_menu ul li:last-child a{
+    background: url(../imgs/icon_utill_global.png) no-repeat 0 0;
+    width: 30px;
+    margin-left: 15px;
+}
