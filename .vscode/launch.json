@@ -1,0 +1,217 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Ari3",
+            "request": "launch",
+            "mainClass": "a0313.Ari3",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Logical2",
+            "request": "launch",
+            "mainClass": "a0313.Logical2",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Ex01",
+            "request": "launch",
+            "mainClass": "a0313.Ex01",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Var1",
+            "request": "launch",
+            "mainClass": "a0312.Var1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Var2",
+            "request": "launch",
+            "mainClass": "a0312.Var2",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Var3",
+            "request": "launch",
+            "mainClass": "a0312.Var3",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Var4",
+            "request": "launch",
+            "mainClass": "a0312.Var4",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Var5",
+            "request": "launch",
+            "mainClass": "a0312.Var5",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Var6",
+            "request": "launch",
+            "mainClass": "a0312.Var6",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Var7",
+            "request": "launch",
+            "mainClass": "a0312.Var7",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Var8",
+            "request": "launch",
+            "mainClass": "a0312.Var8",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Varex2",
+            "request": "launch",
+            "mainClass": "a0312.Varex2",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Varex2_1",
+            "request": "launch",
+            "mainClass": "a0312.Varex2_1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Varex3",
+            "request": "launch",
+            "mainClass": "a0312.Varex3",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Varex4",
+            "request": "launch",
+            "mainClass": "a0312.Varex4",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Varex5",
+            "request": "launch",
+            "mainClass": "a0312.Varex5",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Varex6",
+            "request": "launch",
+            "mainClass": "a0312.Varex6",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "hellojava",
+            "request": "launch",
+            "mainClass": "a0312.hellojava",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "hellojava2",
+            "request": "launch",
+            "mainClass": "a0312.hellojava2",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Comp1",
+            "request": "launch",
+            "mainClass": "a0313.Comp1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Comp2",
+            "request": "launch",
+            "mainClass": "a0313.Comp2",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Logical1",
+            "request": "launch",
+            "mainClass": "a0313.Logical1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Operadd1",
+            "request": "launch",
+            "mainClass": "a0313.Operadd1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Operadd2",
+            "request": "launch",
+            "mainClass": "a0313.Operadd2",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Operator1",
+            "request": "launch",
+            "mainClass": "a0313.Operator1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Operator2",
+            "request": "launch",
+            "mainClass": "a0313.Operator2",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Operator3",
+            "request": "launch",
+            "mainClass": "a0313.Operator3",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Operator4",
+            "request": "launch",
+            "mainClass": "a0313.Operator4",
+            "projectName": "Taejun_365409c4"
+        }
+    ]
+}
