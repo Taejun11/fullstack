@@ -6,6 +6,167 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Ex7",
+            "request": "launch",
+            "mainClass": "a0317.Ex7",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Dice",
+            "request": "launch",
+            "mainClass": "a0317.Dice",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Ex5",
+            "request": "launch",
+            "mainClass": "a0317.Ex5",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Ex4",
+            "request": "launch",
+            "mainClass": "a0317.Ex4",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Ex3",
+            "request": "launch",
+            "mainClass": "a0317.Ex3",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Ex1",
+            "request": "launch",
+            "mainClass": "a0317.Ex1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Break2",
+            "request": "launch",
+            "mainClass": "a0317.Break2",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Break1_1",
+            "request": "launch",
+            "mainClass": "a0317.Break1_1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Break1",
+            "request": "launch",
+            "mainClass": "a0317.Break1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Dowhile1_1",
+            "request": "launch",
+            "mainClass": "a0317.Dowhile1_1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "dowhile1_1",
+            "request": "launch",
+            "mainClass": "a0317.dowhile1_1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "While2_2",
+            "request": "launch",
+            "mainClass": "a0317.While2_2",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "While2_1",
+            "request": "launch",
+            "mainClass": "a0317.While2_1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "While1_2",
+            "request": "launch",
+            "mainClass": "a0317.While1_2",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Scanner4",
+            "request": "launch",
+            "mainClass": "a0314.Scanner4",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Ex3",
+            "request": "launch",
+            "mainClass": "a0314.Ex3",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Scanner2",
+            "request": "launch",
+            "mainClass": "a0314.Scanner2",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Escape1",
+            "request": "launch",
+            "mainClass": "a0314.Escape1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Escape",
+            "request": "launch",
+            "mainClass": "a0314.Escape",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Sam",
+            "request": "launch",
+            "mainClass": "a0314.Sam",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "If1_2",
+            "request": "launch",
+            "mainClass": "a0314.If1_2",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Switch2",
+            "request": "launch",
+            "mainClass": "a0314.Switch2",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "If1_1",
+            "request": "launch",
+            "mainClass": "a0314.If1_1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
             "name": "Ari3",
             "request": "launch",
             "mainClass": "a0313.Ari3",

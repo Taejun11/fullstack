@@ -1,0 +1,18 @@
+https://openweathermap.org/
+
+0b5461cf751ffee4b43eeb2168f3f3e1
+
+http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=0b5461cf751ffee4b43eeb2168f3f3e1
+
+첫번째 id는 도시코드 (id=524901)
+url 뒤에 있는 숫자가 도시코드
+서울 : 1835848
+
+http://api.openweathermap.org/data/2.5/forecast?id=1835848&appid=0b5461cf751ffee4b43eeb2168f3f3e1
+서울의 도시와 내 api 연결된 주소
+
+http://api.openweathermap.org/data/2.5/forecast?id=1835848&appid=0b5461cf751ffee4b43eeb2168f3f3e1&units=metric
+forecast: 예보
+
+forecast -> weather: 현재
+http://api.openweathermap.org/data/2.5/weather?id=1835848&appid=0b5461cf751ffee4b43eeb2168f3f3e1&units=metric

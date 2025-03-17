@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <script>
+        const person = {
+            name : "Alice",
+            age : 25,
+            isStudent : false,
+            greet : function(){
+                document.write("hello, my name is " + this.name + "<br>");
+            },
+        };
+        document.write(person.name+"<br>");
+        document.write(person["age"]+"<br>");
+        person.greet();
+
+        const jsonString = '{"name": "Alice" , "age": 25, "isStudent": false}'
+        const obj = JSON.parse(jsonString);
+        console.log(jsonString);
+
+        const jsonString1 = {name: "Alice" , age: 25, isStudent: false}
+        const obj1 = JSON.stringify(jsonString1);
+        console.log(jsonString1);
+    </script>
+</body>
+</html>
