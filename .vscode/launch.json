@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ArrEx3_1",
+            "request": "launch",
+            "mainClass": "a0318.ArrEx3_1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "ArrEx1",
+            "request": "launch",
+            "mainClass": "a0318.ArrEx1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Overloading",
+            "request": "launch",
+            "mainClass": "a0318.Overloading",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Ex3",
+            "request": "launch",
+            "mainClass": "a0318.Ex3",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "RandomNumber",
+            "request": "launch",
+            "mainClass": "a0318.RandomNumber",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Method4",
+            "request": "launch",
+            "mainClass": "a0318.Method4",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Square1",
+            "request": "launch",
+            "mainClass": "a0318.Square1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
             "name": "Ex7",
             "request": "launch",
             "mainClass": "a0317.Ex7",
