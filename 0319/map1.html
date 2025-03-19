@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map1</title>
+</head>
+<body>
+    <div id="map" style="width:500px;height:400px;"></div>
+	<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=33c262575444d8d5232f4a42b6ba83a1"></script>
+	<script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(37.485867, 126.897487), //구글지도 우클릭 -> 이 위치 공유
+			level: 5
+		};
+
+		var map = new kakao.maps.Map(container, options);
+	</script>
+</body>
+</html>

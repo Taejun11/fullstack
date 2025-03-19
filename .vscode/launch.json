@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Ex2",
+            "request": "launch",
+            "mainClass": "a0319.Ex2",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Ex3",
+            "request": "launch",
+            "mainClass": "a0319.Ex3",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Array3",
+            "request": "launch",
+            "mainClass": "a0319.Array3",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Sum1",
+            "request": "launch",
+            "mainClass": "a0319.Sum1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
             "name": "ArrEx3_1",
             "request": "launch",
             "mainClass": "a0318.ArrEx3_1",
