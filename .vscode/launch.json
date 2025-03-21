@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Book",
+            "request": "launch",
+            "mainClass": "a0321.book.Book",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Accounttest",
+            "request": "launch",
+            "mainClass": "a0321.account.Accounttest",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Herotest",
+            "request": "launch",
+            "mainClass": "a0321.Herotest",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Ex1_1",
+            "request": "launch",
+            "mainClass": "a0320.Ex1_1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Class3",
+            "request": "launch",
+            "mainClass": "a0320.Class3",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Class1",
+            "request": "launch",
+            "mainClass": "a0320.Class1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Sum1",
+            "request": "launch",
+            "mainClass": "a0320.Sum1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
             "name": "Ex2",
             "request": "launch",
             "mainClass": "a0319.Ex2",
