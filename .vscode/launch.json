@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main3",
+            "request": "launch",
+            "mainClass": "a0324.over.Main3",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Cartest",
+            "request": "launch",
+            "mainClass": "a0324.rpg2.Cartest",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Area1",
+            "request": "launch",
+            "mainClass": "a0324.rpg2.Area1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Arraylist1",
+            "request": "launch",
+            "mainClass": "a0324.Arraylist1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
             "name": "Book",
             "request": "launch",
             "mainClass": "a0321.book.Book",
