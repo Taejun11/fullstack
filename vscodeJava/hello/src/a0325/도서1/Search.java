@@ -1,4 +1,4 @@
-package a0324.도서1;
+package a0325.도서1;
 
 import java.util.Scanner;
 
@@ -54,6 +54,45 @@ public class Search {
                     scan.nextLine();
                     manager.addLibrary(newTitle, newAuthor, newLocation, newIsbn);
                     System.out.println("도서추가 완료");
+                    break;
+
+                case 5:
+                    System.out.println("삭제 시작");
+                    System.out.println("삭제할 도서 이름을 적어주세요:");
+                    String dname = scan.nextLine();
+                    if (dname.equals("")) {
+                        System.out.println("삭제하려는 도서 이름을 다시 입력해주세요.");
+                        dname = scan.nextLine();
+                    }
+                    manager.delLibrary(dname);
+                    // System.out.println("삭제 완료");
+                    break;
+
+                case 6:
+                    System.out.println("수정 시작");
+                    System.out.println("수정할 도서 이름을 적어주세요:");
+                    String uname = scan.nextLine();
+                    if (uname.equals("")) {
+                        System.out.println("수정하려는 도서 이름을 다시 입력해주세요.");
+                        uname = scan.nextLine();
+                    }
+                    manager.updateLibrary(uname);
+                    break;
+                case 7:
+                    System.out.println("조회 시작\n 도서 이름을 입력하세요.");
+                    String sname = scan.nextLine();
+                    if (sname.equals("")) {
+                        System.out.println("삭제하려는 도서 이름을 다시 입력해주세요.");
+                        sname = scan.nextLine();
+                    }
+                    manager.showLibrary(sname);
+                    System.out.println("조회 완료");
+                    break;
+                case 8:
+                    System.out.println("종료");
+                    flag = false;
+                    scan.close();
+                    System.exit(0);
                     break;
 
                 default:

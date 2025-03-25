@@ -1,4 +1,4 @@
-package a0324.숙소;
+package a0325.숙소;
 
 import java.util.Scanner;
 
@@ -12,14 +12,14 @@ public class Main {
             System.out.println("1. 예약 가능한 숙소 보기");
             System.out.println("2. 숙소 예약하기");
             System.out.println("3. 예약한 숙소 보기");
-            System.out.println("4. 숙소 추가하기"); // 여기까지 기능 구현
+            System.out.println("4. 숙소 추가하기");
             System.out.println("5. 숙소 삭제하기");
-            System.out.println("6. 숙소 정보 수정하기");
+            System.out.println("6. 숙소 정보 수정하기");// 할 차례
             System.out.println("7. 숙소 정보 조회하기");
             System.out.println("8. 종료");
             System.out.print("원하는 작업을 선택하세요 > ");
-            int choice = scan.nextInt();
-            scan.nextLine();
+            int choice = Integer.parseInt(scan.nextLine());
+            // scan.nextLine();
 
             switch (choice) {
                 case 1:
@@ -53,14 +53,43 @@ public class Main {
                     manager.add(newName, newLocation, newPrice);
                     System.out.println("숙소 추가 완료");
                     break;
+                case 5:
+                    System.out.println("숙소 삭제");
+                    System.out.println("삭제할 숙소 이름: ");
+                    String delName = scan.nextLine();
+                    manager.del(delName);
+                    break;
+                case 6:
+                    System.out.println("숙소 정보 수정");
+                    System.out.println("수정할 숙소의 이름을 적어주세요.");
+                    String update = scan.nextLine();
+                    if (update.equals("")) {
+                        System.out.println("다시 입력해 주세요.");
+                        update = scan.nextLine();
+                    }
+                    manager.update(update, scan);
+                    break;
+                case 7:
+                    System.out.println("숙소 정보 조회");
+                    System.out.println("조회할 숙소의 이름을 적어주세요");
+                    String search = scan.nextLine();
+                    if (search.equals("")) {
+                        System.out.println("다시 입력해 주세요.");
+                        search = scan.nextLine();
+                    }
+                    manager.show(search);
+                    break;
                 case 8:
                     System.out.println("시스템 종료");
                     flag = false;
+                    // System.exit(0);
                     break;
 
                 default:
                     break;
             }
         }
+
+        scan.close();
     }
 }
