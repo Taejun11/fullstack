@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Map",
+            "request": "launch",
+            "mainClass": "a0327.숙제.Map",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Arrays1",
+            "request": "launch",
+            "mainClass": "a0327.class1.Arrays1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Coffeeorder",
+            "request": "launch",
+            "mainClass": "a0326.coffee1.Coffeeorder",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Stringex2",
+            "request": "launch",
+            "mainClass": "a0326.string.Stringex2",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Animalmain",
+            "request": "launch",
+            "mainClass": "a0326.grade.Animalmain",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
             "name": "Main3",
             "request": "launch",
             "mainClass": "a0324.over.Main3",
