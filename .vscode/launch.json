@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MainClass",
+            "request": "launch",
+            "mainClass": "a0328.도서.MainClass",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "FileCreate",
+            "request": "launch",
+            "mainClass": "a0328.file1.FileCreate",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "File3_1",
+            "request": "launch",
+            "mainClass": "a0328.file1.File3_1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
             "name": "Map",
             "request": "launch",
             "mainClass": "a0327.숙제.Map",
