@@ -1,6 +1,6 @@
 package a0327.class1;
 
-public class Interger1 {
+public class Integer1 {
     public static void main(String[] args) {
         int a = 10; //기본형
         // wrapper 클래스
