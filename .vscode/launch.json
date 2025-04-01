@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "List3",
+            "request": "launch",
+            "mainClass": "a0401.List3",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "List2",
+            "request": "launch",
+            "mainClass": "a0401.List2",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
             "name": "Main1",
             "request": "launch",
             "mainClass": "a0331.book.Main1",
