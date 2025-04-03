@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FlightReservation",
+            "request": "launch",
+            "mainClass": "a0403.javaair.FlightReservation",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
+            "name": "Main1",
+            "request": "launch",
+            "mainClass": "a0403.영화관.Main1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
             "name": "List3",
             "request": "launch",
             "mainClass": "a0401.List3",
