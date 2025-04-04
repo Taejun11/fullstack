@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main1",
+            "request": "launch",
+            "mainClass": "a0404.영화관.Main1",
+            "projectName": "Taejun_365409c4"
+        },
+        {
+            "type": "java",
             "name": "FlightReservation",
             "request": "launch",
             "mainClass": "a0403.javaair.FlightReservation",

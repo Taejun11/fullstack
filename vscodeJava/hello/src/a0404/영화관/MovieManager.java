@@ -1,4 +1,4 @@
-package a0403.영화관;
+package a0404.영화관;
 
 import java.time.DateTimeException;
 import java.util.ArrayList;
@@ -11,8 +11,7 @@ public class MovieManager {
     private static ArrayList<MovieList> movieLists; //영화 정보 저장
     private static ArrayList<Customer> customers;   //고객 정보 저장
     Scanner scan = new Scanner(System.in);
-    // 고객, 예매한 영화를 맵으로 저장
-    private static Map<String, MovieList> reserv = new HashMap<>();
+    private static Map<String, MovieList> reserv = new HashMap<>(); // 고객, 예매한 영화를 맵으로 저장
     private static FileC fc = new FileC();
 
     public MovieManager() {
@@ -24,8 +23,9 @@ public class MovieManager {
         movieLists.add(new MovieList("고독한 미식가 더 무비", "17:10", "110", 12000, 0));
 
         customers = new ArrayList<>();
-        MovieList mv = movieLists.get(0);
-        reserv.put("테스트", mv);
+        
+        // MovieList mv = movieLists.get(0);
+        // reserv.put("테스트", mv);
     }
     // 1번 영화 목록 보여주는 함수
     public void viewList(String str) {
@@ -41,7 +41,7 @@ public class MovieManager {
     // 2번 영화 예매하는 함수
     public void reserv() throws InterruptedException{
         for(;;){
-            viewList("좌석 예매 하기");
+            viewList("영화 예매 하기");
             System.out.println("예매할 영화를 입력해주세요.");
             System.out.print("메인메뉴로 돌아가시려면 0을 입력하세요.\n>>");
             try {
@@ -69,19 +69,14 @@ public class MovieManager {
                 }//예약하는 함수
 
                 if (customers != null && !customers.isEmpty()) {
-                    String seatNum = Integer.toString(seatSelection(mm));
-                    customers.get(customers.size() - 1).setSeat(seatNum);
-                    System.out.println("선택하신 내용이 맞으시다면 \"확인\"을 입력해주세요.");
-                    System.out.println("다시 선택하실 원하신다면 \"취소\"를 입력해주세요.");
-                    String ok = scan.next();
-                    scan.nextLine();
+                    String seatNum = Integer.toString(seatSelection(mm, bookNum));
+                    System.out.println(seatNum);
+                    if (seatNum.equals("-1")) {
+                        break;
+                    }
 
-                    // if (ok.equals("확인")) {
-                        
-                    // } else if (ok.equals("취소")) {
-                    //     System.out.println("영화 선택으로 돌아갑니다.");
-                    //     continue;
-                    // }
+                    customers.get(customers.size() - 1).setSeat(seatNum);
+
                     System.out.println("예약중입니다.");
                     Thread.sleep(2000);
 
@@ -90,6 +85,7 @@ public class MovieManager {
                     System.out.println(bookNum + "" + mm.toString());
                     System.out.println("잠시 후 메인화면으로 이동합니다.");
                     Thread.sleep(2000);
+                    System.out.println(customers.size());
                     reserv.put(customers.get(customers.size() - 1).getName(), mm);
                     break;
                 }
@@ -108,9 +104,9 @@ public class MovieManager {
         try {
             int birthdate = Integer.parseInt(scan.next());
             Customer c = new Customer(name, birthdate);
-            if (!c.man19(c) && mm.getAdultOnly()>=19) {
-                // 예매자가 19세 미만이면서 청불영화일 경우에만 실행 -> 예매 불가
-                System.out.println("만 19세 미만은 해당 영화를 예약할 수 없습니다.");
+            if (c.manAge(c) < mm.getAdultOnly()) {
+                // 예매자의 나이가 영화 연령가를 넘지 않을 경우에만 실행 -> 예매 불가
+                System.out.printf("만 %d세 미만은 해당 영화를 예약할 수 없습니다.\n", mm.getAdultOnly());
                 return;
             }else{
                 System.out.println("결제 비밀번호를 입력해주세요. ");
@@ -123,7 +119,7 @@ public class MovieManager {
         }
     }
     // 예매자 좌석 갱신하는 함수
-    private int seatSelection(MovieList mm) {
+    private int seatSelection(MovieList mm, int bookNum) {
         //좌석 선택 함수
         int seatNum = -1;
         while (true) {
@@ -139,10 +135,31 @@ public class MovieManager {
                 }else if (mm.getSeats().get(seatint).equals("XX")) {
                     System.out.println("이미 예약된 좌석입니다.");
                 }else{
-                    mm.getSeats().set(seatint, "XX");
-                    System.out.println("좌석 선택이 완료되었습니다.");
+                    // 예약상황 다시 확인
                     seatNum = seatint;
-                    break;
+                    mm.toString();
+                    System.out.println("원하시는 영화와 좌석이 맞는 지 다시 한 번 확인해주세요.");
+                    System.out.println(seatNum+1);
+                    System.out.println(movieLists.get(bookNum-1).getTitle() + "/" + (seatNum+1));//영화/좌석
+                    System.out.println("이대로 진행을 원하시면 \"확인\"을 입력해주세요.");
+                    System.out.println("다시 선택하길 원하시면 \"취소\"을 입력해주세요.");
+                    System.out.print(">>");
+                    String ok = scan.next();
+
+                    if (ok.equals("확인")) {
+                        mm.getSeats().set(seatint, "XX");
+                        System.out.println("좌석 선택이 완료되었습니다.");
+                        break;
+                    }else if (ok.equals("취소")) {
+                        System.out.println("메인메뉴로 돌아갑니다.");
+                        seatNum = -1;
+                        break;
+                    }else{
+                        System.out.println("잘못된 입력입니다.");
+                        seatNum = -1;
+                        break;
+                    }
+
                 }
             } catch (InputMismatchException e) {
                 System.out.println("잘못된 입력입니다.");
@@ -181,11 +198,13 @@ public class MovieManager {
             if (index != -1) {
                 System.out.println("결제 비밀번호를 입력해주세요.");
                 String pw = scan.next();
-                System.out.println();
                 if (customers.get(index).getPw().equals(pw)) {
                     System.out.println("비밀번호 일치");
                     System.out.println(ticketPrint(reserv, customers.get(index).getName()));
                     break;
+                } else {
+                    System.out.println("비밀번호가 틀렸습니다.");
+                    System.out.println();
                 }
             }else{
                 break;
