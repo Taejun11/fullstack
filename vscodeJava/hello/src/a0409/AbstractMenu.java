@@ -11,7 +11,8 @@ abstract class AbstractMenu implements Menu{
 
     public void print(){
         // 할아버지 인터페이스에 있는 것
-        System.out.println(menuText); //메뉴출력
+        // 자식 클래스에서는 따로 안적어도 됨
+        System.out.print(menuText + "\n>>"); //메뉴출력
     }
 
     public AbstractMenu(String menuText, Menu prevMenu) {

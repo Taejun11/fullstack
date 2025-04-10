@@ -2,7 +2,7 @@ package a0409;
 
 public class Main1 {
     public static void main(String[] args) {
-        System.out.println("듣고싶은 명언의 종류를 입력하세요.");
+        System.out.println("선택할 작업을 입력하세요.");
         Menu menu = Mainmenu.getInstance();
         // Menu 인터페이스로 만들어진 menu 객체는
         // 할아버지 인터페이스를 상속받는 아버치 클래스를 상속받는 자식 클래스를 가져옴
