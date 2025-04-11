@@ -31,6 +31,10 @@ class Mainmenu extends AbstractMenu {
                 return this; // 이 싱글톤객체를 다시 반환하여 프로그램을 이어감
 
             case "0": // 관리자메뉴
+                if (!checkRoot()) { //관리자 비밀번호 입력받음
+                    System.out.println("비밀번호를 틀렸습니다.");
+                    return this;
+                }
                 AdminMenu adminMenu = AdminMenu.getInstance(); // 관리자 객체를 가져옴
                 adminMenu.setPrevMenu(this); // mainMenu메인 메뉴를 이전 메뉴로 등록
                 return adminMenu; // 관리자 메뉴 반환
@@ -43,6 +47,13 @@ class Mainmenu extends AbstractMenu {
                 System.out.println("목록에 없는 선택지입니다.");
                 return this;
         }
+    }
+
+    private boolean checkRoot() {
+        System.out.println("관리자 비밀번호를 입력하세요:");
+        // scan.nextLine();
+        return "root".equals(scan.nextLine());
+        // 비밀번호 root
     }
 
     private void wises() { // 랜덤명언 1번선택시
