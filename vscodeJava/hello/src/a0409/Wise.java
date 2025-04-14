@@ -16,9 +16,9 @@ public class Wise {
         this.author = author;
     }
 
-    private static final File file = new File("D:\\Taejun\\vscodeJava\\hello\\src\\a0409\\wise.txt");
+    private static final File file = new File("D:\\wise\\wise.txt");
     // 원본파일 경로
-    private static final File backup_file = new File("D:\\Taejun\\vscodeJava\\hello\\src\\a0409\\wise_backup.txt");
+    private static final File backup_file = new File("D:\\wise\\wise_backup.txt");
     // 백업파일 경로
 
 
@@ -90,7 +90,7 @@ public class Wise {
         fw.close();
     }
 
-    public static void getfile() throws IOException{ //4번 입력 시 파일 내보내기
+    public static void getfile() throws IOException{ //5번 입력 시 파일 내보내기
         // 백업파일을 읽고 원본파일에 모두 덮어쓰기
         BufferedReader br = new BufferedReader(new FileReader(backup_file));
         String text = "";

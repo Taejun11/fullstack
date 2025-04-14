@@ -12,8 +12,9 @@ class Mainmenu extends AbstractMenu {
     }
 
     private static final String MAINMENU_TEXT = // 첫 메뉴에 추가할 분류메뉴 텍스트
-            // 아버지 클래스 호출에 넣을 String
-            "1. 랜덤 명언 출력 \n" +
+                    // 아버지 클래스 호출에 넣을 String
+                    "1. 랜덤 명언 출력 \n" +
+                    "2. 선택 명언 출력 \n" +
                     "0. 관리자메뉴\n" +
                     "q: 종료\n";
 
@@ -27,7 +28,11 @@ class Mainmenu extends AbstractMenu {
         //
         switch (scan.nextLine()) {
             case "1": // 랜덤명언
-                wises();
+                randomWises();
+                return this; // 이 싱글톤객체를 다시 반환하여 프로그램을 이어감
+
+            case "2": // 선택명언
+                selectWises();
                 return this; // 이 싱글톤객체를 다시 반환하여 프로그램을 이어감
 
             case "0": // 관리자메뉴
@@ -56,13 +61,32 @@ class Mainmenu extends AbstractMenu {
         // 비밀번호 root
     }
 
-    private void wises() { // 랜덤명언 1번선택시
+    private void randomWises() { // 랜덤명언 1번선택시
         try {
             ArrayList<Wise> happy = Wise.happy();
             int i = (int) (Math.random() * happy.size());
             // txt파일에 적힌 명언 개수 만큼 랜덤돌림
             System.out.printf("%s\n", happy.get(i).toString());
             // 실행할 때 마다 랜덤명언 한줄 출력 후 메뉴로 돌아감
+
+        } catch (IOException e) {
+            System.out.printf("파일 입출력에 문제 발생: %s\n", e.getMessage());
+            e.printStackTrace(); // 예외 스택 추적 출력
+        } catch (Exception e) {
+            System.out.printf("출력 실패: %s\n",e.getMessage());
+
+        }
+    }
+
+    private void selectWises() { // 선택명언 2번선택시
+        try {
+            ArrayList<Wise> happy = Wise.happy();
+
+            System.out.println("번호를 선택해주세요.");
+            int i = Integer.parseInt(scan.nextLine());
+            
+            System.out.printf("%s\n", happy.get(i-1).toString());
+            // txt파일에 적힌 i번째 줄 명언을 출력
 
         } catch (IOException e) {
             System.out.printf("파일 입출력에 문제 발생: %s\n", e.getMessage());

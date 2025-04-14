@@ -19,7 +19,26 @@
         "tuple": "cpp",
         "type_traits": "cpp",
         "utility": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "cctype": "cpp",
+        "clocale": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp",
+        "unordered_map": "cpp",
+        "exception": "cpp",
+        "optional": "cpp",
+        "system_error": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "new": "cpp",
+        "streambuf": "cpp",
+        "typeinfo": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

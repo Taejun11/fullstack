@@ -33,6 +33,8 @@ public class AdminMenu extends AbstractMenu{
         
             case "2": //명언 목록
                 list();
+                System.out.println("---------------------------");
+                // 절취선
                 return this;
         
             case "3": //명언 삭제
@@ -42,6 +44,7 @@ public class AdminMenu extends AbstractMenu{
             case "4": //명언파일 백업
                 backup();
                 return this;
+                
             case "5": //명언파일 가져오기
                 getfile();
                 return this;
