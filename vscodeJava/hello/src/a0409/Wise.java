@@ -48,6 +48,7 @@ public class Wise {
         FileWriter fw = new FileWriter(file, true);
         // 명언파일 대상 이어쓰기모드
         fw.write(this.tofileString()+"\n");
+        // 한줄 띄어야 다음 명언 추가할 경우 다음 줄부터 이어씀
         fw.close();
     }
 
@@ -83,6 +84,7 @@ public class Wise {
 
         while ((line = br.readLine()) != null) {
             text += line + "\n";
+            // 한줄 띄어야 다음 명언 추가할 경우 다음 줄부터 이어씀
         }
         br.close();
         FileWriter fw = new FileWriter(backup_file);
@@ -98,6 +100,7 @@ public class Wise {
 
         while ((line = br.readLine()) != null) {
             text += line + "\n";
+            // 한줄 띄어야 다음 명언 추가할 경우 다음 줄부터 이어씀
         }
         br.close();
         FileWriter fw = new FileWriter(file);
