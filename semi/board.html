@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>게시판</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+    <div class="row">
+
+        <!-- 왼쪽: 카테고리 -->
+        <div class="col-3">
+            <h5>카테고리</h5>
+            <ul class="list-group">
+                <li class="list-group-item active">
+                    <a href=# class="text-white text-decoration-none d-block">전체 게시판</a>
+                </li>
+                <li class="list-group-item">
+                    <a href=# class="text-dark text-decoration-none d-block">자유게시판</a>
+                </li>
+                <li class="list-group-item">
+                    <a href=# class="text-dark text-decoration-none d-block">공지사항</a>
+                </li>
+                <li class="list-group-item">
+                    <a href=# class="text-dark text-decoration-none d-block">Q&A</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 오른쪽: 게시글 목록 -->
+        <div class="col-9">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5>게시글 목록</h5>
+
+                <!-- 드롭다운 메뉴 -->
+                <div class="dropdown">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        게시물 5개씩 보기
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">5개씩 보기</a></li>
+                        <li><a class="dropdown-item" href="#">10개씩 보기</a></li>
+                        <li><a class="dropdown-item" href="#">20개씩 보기</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 게시판 테이블 -->
+            <table class="table mt-3">
+                <tbody>
+                    <tr>
+                        <td><a href="post1.html" class="text-dark text-decoration-none">첫 번째 게시글입니다</a></td>
+                        <td>홍길동</td>
+                        <td>2025-05-07</td>
+                    </tr>
+                    <tr>
+                        <td><a href="post2.html" class="text-dark text-decoration-none">두 번째 게시글입니다</a></td>
+                        <td>김철수</td>
+                        <td>2025-05-06</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
