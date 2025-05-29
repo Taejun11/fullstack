@@ -1,52 +1,37 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<head><title>게시글 목록</title></head>
 <body>
-<h1>게시판</h1>
-<button onclick="location.href = '/form'">글쓰기</button>
+<h1>게시글 목록</h1>
+<a href="/form">글쓰기</a>
 <table border="1">
     <thead>
-        <tr>
-            <th>ID</th>
-            <th>제목</th>
-            <th>작성자</th>
-            <th>작성일</th>
-            <th>액션</th>
-        </tr>
+    <tr>
+        <th>ID</th><th>제목</th><th>작성자</th><th>작성일</th><th>액션</th>
+    </tr>
     </thead>
-    <tbody id="boardList"></tbody>
+    <tbody>
+    <tr th:each="board : ${boards}">
+        <td th:text="${board.id}"></td>
+        <td><a th:href="@{'/detail/' + ${board.id}}" th:text="${board.title}"></a></td>
+<!--        <td><a th:href="@{'/detail?id=' + ${board.id}}" th:text="${board.title}"></a></td>-->
+        <td th:text="${board.writer}"></td>
+        <td th:text="${board.createTime}"></td>
+        <td>
+            <a th:href="@{'/update/' + ${board.id}}">수정</a><!-- // 주소가 /update/숫자 로 감-->
+<!--            <a th:href="@{'/update?id=' + ${board.id}}">수정</a> &lt;!&ndash; // 주소가 /update?id=숫자 로 감&ndash;&gt;-->
+            <a href="#" th:onclick="|deleteBoard(${board.id})|">삭제</a>
+        </td>
+    </tr>
+    </tbody>
 </table>
 <script>
-    fetch('/api/boards')
-    .then(res => res.json())
-    .then(data => {
-      const tbody = document.getElementById('boardList');
-      tbody.innerHTML = data.map(b =>`
-        <tr>
-          <td>${b.id}</td>
-          <td><a href="/detail.html?id=${b.id}">${b.title}</a></td>
-          <td>${b.writer}</td>
-          <td>${b.createTime}</td>
-           <td>
-              <button onclick="location.href='/update?id=${b.id}'">수정</button>
-              <button onclick="remove(${b.id})">삭제</button>
-          </td>
-        </tr>
-      `).join('');
-    });
-    function remove(id) {
-    if (confirm('정말 삭제하시겠습니까?')) {
-        fetch(`/api/boards/${id}`, {
-            method: 'DELETE'
-        }).then(() => {
-            alert('삭제되었습니다.');
-            location.reload();
-        });
+    function deleteBoard(id) {
+        if (confirm('삭제하시겠습니까?')) {
+            fetch(`/api/boards/${id}`, { method: 'DELETE' })
+                .then(() => location.reload());
+        }
     }
-}
 </script>
 </body>
 </html>

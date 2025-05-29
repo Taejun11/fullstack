@@ -5,6 +5,31 @@
     <title>Title</title>
 </head>
 <body>
-
+<h1>게시글 상세</h1>
+<input type="hidden" th:value="${board.id}" id="id">
+<div>
+    <strong>제목: </strong> <span th:text="${board.title}"></span>
+</div>
+<div>
+    <strong>내용: </strong> <span th:text="${board.content}"></span>
+</div>
+<div>
+    <strong>작성자: </strong> <span th:text="${board.writer}"></span>
+</div>
+<div>
+    <strong>작성일: </strong> <span th:text="${board.createTime}"></span>
+</div>
+<br>
+<a th:href="@{'/detail?id=' + ${board.id}}">수정하기</a>
+<a href="#" th:onclick="|deleteBoard(${board.id})|">삭제하기</a>
+<a href="/list">목록으로</a>
+<script>
+    function deleteBoard(id) {
+        if (confirm('삭제하시겠습니까?')) {
+            fetch(`/api/boards/${id}`, { method: 'DELETE' })
+                .then(() => location.reload());
+        }
+    }
+</script>
 </body>
 </html>
