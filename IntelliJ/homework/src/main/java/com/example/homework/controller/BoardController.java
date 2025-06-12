@@ -20,4 +20,9 @@ public class BoardController {
     public String boardList(){
         return "/board/listBoard";
     }
+//    글작성 불러오는 부분
+    @GetMapping("write")
+    public String boardWrite(){
+        return "/board/writeBoard";
+    }
 }

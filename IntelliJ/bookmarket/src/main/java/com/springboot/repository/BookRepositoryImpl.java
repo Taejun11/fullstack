@@ -1,6 +1,7 @@
 package com.springboot.repository;
 
 import com.springboot.domain.Book;
+import com.springboot.exception.BookIdException;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
@@ -71,7 +72,7 @@ public class BookRepositoryImpl implements BookRepository{
             }
         }
         if (bookInfo == null){
-            throw new IllegalArgumentException("도서 아이디가 " + bookId + "인 도서를 찾을 수 없음");
+            throw new BookIdException(bookId);
         }
 
         return bookInfo;
