@@ -43,9 +43,9 @@ public class SecurityConfig {
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         // 그 외 모든 요청은 인증 필요
                         .anyRequest().authenticated()
-                )
+                );
                 // CSRF, CORS 등 기타 설정 유지
-                .csrf().disable();
+//                .csrf().disable();
 
         return http.build();
     }

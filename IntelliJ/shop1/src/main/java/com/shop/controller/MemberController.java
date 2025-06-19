@@ -13,13 +13,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
 @RequestMapping("/members")
+@Controller
 @RequiredArgsConstructor
 public class MemberController {
     private final MemberService memberService;
     private final PasswordEncoder passwordEncoder;
-
     @GetMapping(value = "/new")
     public String memberForm(Model model){
         model.addAttribute("memberFormDto", new MemberFormDto());
@@ -51,7 +50,7 @@ public class MemberController {
 
     @GetMapping(value = "/login/error")
     public String loginError(Model model){
-        model.addAttribute("loginErrorMsg", "아이디 또는 비밀번호를 확인해주세요.");
-        return "member/memberLoginForm";
+        model.addAttribute("loginErrorMsg","아이디 또는 비밀번호를 확인해주세요.");
+        return "/member/memberLoginForm";
     }
 }
