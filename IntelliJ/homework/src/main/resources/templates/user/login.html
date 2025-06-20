@@ -1,6 +1,7 @@
 <!--로그인페이지-->
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -24,9 +25,9 @@
             <div class="alert alert-danger" th:if="${error}">
                 UserName과 Password가 올바르지 않습니다.<br/>
             </div>
-            <form class="form-signin" action="/login" method="post">
+            <form class="form-signin" action="/login" method="post" th:object="${userDto}">
                 <div class="mb-3 row">
-                    <input type="text" name="username" class="form-control" placeholder="User Name" required autofocus>
+                    <input type="text" name="id" class="form-control" placeholder="User Name" required autofocus>
                 </div>
                 <div class="mb-3 row">
                     <input type="password" name="password" class="form-control" placeholder="Password" required>

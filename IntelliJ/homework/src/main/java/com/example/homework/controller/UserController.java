@@ -3,6 +3,8 @@ package com.example.homework.controller;
 import com.example.homework.dto.UserDto;
 import com.example.homework.entity.User;
 import com.example.homework.service.UserService;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,7 +24,19 @@ public class UserController {
 
 //    로그인 하는 부분
     @PostMapping("login")
-    public String loginSuccess(){
+    public String loginSuccess(UserDto userDto, HttpSession httpSession){
+//        if (userDto.getPassword().equals())
+        if (userService.login(userDto)){
+            httpSession.setAttribute("loginSession", userDto);
+            return "redirect:/index";
+        }else {
+            return "redirect:/login";
+        }
+    }
+//    로그아웃 하는 부분
+    @GetMapping("logout")
+    public String logout(HttpSession httpSession){
+        httpSession.invalidate();
         return "redirect:/index";
     }
 
