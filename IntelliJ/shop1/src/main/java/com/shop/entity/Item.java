@@ -2,6 +2,7 @@ package com.shop.entity;
 
 import com.shop.constant.ItemSellStatus;
 import com.shop.dto.ItemFormDto;
+import com.shop.exception.OutOfStockException;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,7 +14,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
-public class Item extends BaseTimeEntity{
+public class Item extends BaseEntity{
 
     @Id
     @Column(name="item_id")
@@ -43,9 +44,9 @@ public class Item extends BaseTimeEntity{
         int restStock = this.stockNumber - stockNumber;
 //        남은 재고가 없을 경우
         if (restStock <= 0){
-//            throw new OutOfStockException("상품의 재고가 부족합니다. (현재 재고수량: " + this.stockNumber + ")");
-            this.stockNumber = restStock;
+            throw new OutOfStockException("상품의 재고가 부족합니다. (현재 재고수량: " + this.stockNumber + ")");
         }
+        this.stockNumber = restStock;
     }
 
 //    주문취소할 경우 남은 재고 되돌림

@@ -26,10 +26,13 @@ public class Order extends BaseTimeEntity{
 
     @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus; //주문상태
-
+//    order 연관관계의 주인
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL
             , orphanRemoval = true, fetch = FetchType.LAZY)
     private List<OrderItem> orderItems = new ArrayList<>();
+//    cascade: order 저장할 때 orderItem 저장
+//    orphanRemoval = true: 부모가 삭제될 때 자식도 db에서 같이 삭제
+//    FetchType.LAZY: 지연로딩 방지
 
     public void addOrderItem(OrderItem orderItem) {
         orderItems.add(orderItem);
