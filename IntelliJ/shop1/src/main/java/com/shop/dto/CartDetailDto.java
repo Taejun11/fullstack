@@ -19,4 +19,32 @@ public class CartDetailDto {
         this.count = count;
         this.imgUrl = imgUrl;
     }
+/* CartItemRepository.findCartDetailDtoList()를 안할 경우
+    @Transactional(readOnly = true)
+    public List<CartDetailDto> getCartDetailList(String email) {
+        Member member = memberRepository.findByEmail(email)
+                .orElseThrow(() -> new EntityNotFoundException("회원이 존재하지 않습니다."));
+
+        Cart cart = cartRepository.findByMemberId(member.getId());
+
+        if (cart == null) {
+            return Collections.emptyList();
+        }
+
+        List<CartItem> cartItems = cartItemRepository.findCartItemsWithItem(cart.getId());
+
+        return cartItems.stream()
+                .map(ci -> {
+                    // 대표 이미지 가져오기
+                    ItemImg repImg = itemImgRepository.findFirstByItemIdAndRepimgYn(ci.getItem().getId(), "Y");
+                    return new CartDetailDto(
+                            ci.getId(),
+                            ci.getItem().getItemNm(),
+                            ci.getItem().getPrice(),
+                            ci.getCount(),
+                            repImg != null ? repImg.getImgUrl() : null
+                    );
+                })
+                .collect(Collectors.toList());
+    }*/
 }

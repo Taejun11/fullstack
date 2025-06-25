@@ -11,6 +11,8 @@ import java.util.List;
 public interface CartItemRepository extends JpaRepository<CartItem, Long> {
     CartItem findByCartIdAndItemId(Long cartId, Long itemId);
 
+//    CartItem ci -> item i <- ItemImg im
+//    ci와 im은 i로 간접적으로 연결되어있음, 직접 연결되어있지 않음
     @Query("select new com.shop.dto.CartDetailDto(ci.id, i.itemNm, i.price, ci.count, im.imgUrl) " +
             "from CartItem ci, ItemImg im " +
             "join ci.item i " +
