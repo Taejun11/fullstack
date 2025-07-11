@@ -37,13 +37,25 @@ export default function App() {
         };
         setTodo([newItem, ...todo]);
         idRef.current += 1;
-    }
+    };
+    // 할 일의 id를 targetId로 받음
+    const onUpdate = (targetId) => {
+        setTodo(
+            todo.map((it) => //현재 todo 배열 순회
+                it.id === targetId ? { ...it, isDone: !it.isDone } : it
+            )
+        );
+    };
+    const onDelete = (targetId) => {
+        // 실제 데이터가 삭제되는 것이 아님, 삭제 버튼 누른 요소 빼고 출력해주는 방식
+        setTodo(todo.filter((it) => it.id !== targetId));
+    };
 
     return (
         <div className='App'>
             <Header />
-            <TodoEditor onCreate={onCreate}/>
-            <TodoList todo={todo}/>
+            <TodoEditor onCreate={onCreate} />
+            <TodoList todo={todo} onUpdate={onUpdate} onDelete={onDelete}/>
         </div>
     )
 }
