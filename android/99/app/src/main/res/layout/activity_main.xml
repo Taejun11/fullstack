@@ -14,7 +14,7 @@
         android:scrollbars="vertical" />
 
     <!-- FloatingActionButton: 지출 추가 버튼 -->
-    <androidx.appcompat.widget.AppCompatImageView
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddExpense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

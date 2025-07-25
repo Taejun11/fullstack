@@ -22,6 +22,8 @@ class AddExpenseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_expense)
 
+        viewModel = ViewModelProvider(this)[ExpenseViewModel::class.java]
+
         val nameEditText: EditText = findViewById(R.id.editTextName)
         val amountEditText: EditText = findViewById(R.id.editTextAmount)
         val buttonSave: Button = findViewById(R.id.buttonSave)
