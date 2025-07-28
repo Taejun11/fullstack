@@ -1,14 +1,14 @@
 구글 https://console.cloud.google.com
-id 297488217032-n0o8g3bu5q7pljr7den3dsa1dhdivgv2.apps.googleusercontent.com
-비밀번호 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
+id 
+비밀번호 
 
 네이버 https://developers.naver.com 
-id Th76B7NFK78ki2Pq9gGB
-비밀번호 HkEfPMVbIA
+id 
+비밀번호 
 
 카카오 https://developers.kakao.com
-id b7c2164f8b5e536e8e1b2d1162255e74
-비밀번호 XD60YU72xj1rRICRfxU7p4CxI7OUPp3R
+id 
+비밀번호 
 
 
 로그인 위치 
