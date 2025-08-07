@@ -1,0 +1,39 @@
+package com.highgarden.springboot_board.repository;
+
+import com.highgarden.springboot_board.dto.BoardDTO;
+import lombok.RequiredArgsConstructor;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+@RequiredArgsConstructor
+public class BoardRepository {
+    private final SqlSessionTemplate sql;
+//    mybatis db 연결, sql 실행
+    public void save(BoardDTO boardDto) {
+        sql.insert("Board.save", boardDto);
+    }
+
+    public List<BoardDTO> findAll() {
+        System.out.println("findAll");
+        return sql.selectList("Board.findAll");
+    }
+
+    public void updateHits(Long id) {
+        sql.update("Board.updateHits", id);
+    }
+
+    public BoardDTO findById(Long id) {
+        return sql.selectOne("Board.findById", id);
+    }
+
+    public void update(BoardDTO boardDTO) {
+        sql.update("Board.update", boardDTO);
+    }
+
+    public void delete(Long id) {
+        sql.delete("Board.delete", id);
+    }
+}
